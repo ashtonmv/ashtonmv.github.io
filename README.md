@@ -1,8 +1,3 @@
----
-image: /assets/images/cover.jpg
----
-
-# Getting started
 Welcome to the Hennig materials theory group! This repository exists to help
 new users to understand the computational methods being used in the group and
 to get started researching their own materials.
