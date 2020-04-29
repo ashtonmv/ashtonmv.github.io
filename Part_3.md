@@ -96,4 +96,4 @@ queue_template: config_files/ # path/to/queue/template containing account info, 
 
 Save and quit that file, and now you're ready to use MPInterfaces.
 
-[Part 1 <--](https://ashtonmv.github.io/Part_2.html) | [--> Part 3](https://ashtonmv.github.io/Part_4.html)
+[Part 2 <--](Part_2.html) | [--> Part 4](Part_4.html)
