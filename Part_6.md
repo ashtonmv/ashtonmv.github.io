@@ -56,4 +56,4 @@ and then open the PDF file however you normally would. It should look like this:
 
 You can see that the band structure you calculated shows an indirect band gap from Gamma to a point near X. That's exactly what we were hoping for. If you're very keen, you'll also notice that the band gap we just calculated for silicon is much lower than its actual band gap (1.1 eV). This is a well-known problem with the theory behind VASP, and there are ways to improve on thisby performing more demanding calculations that take much longer than the one we just ran. If you really feel like it, you can run one of these more accurate calculations for silicon using MPInterfaces by substituting `run_pbe_calculation` with `run_hse_calculation` in the code snippet above. The `plot_band_structure()` function will work the same way for this calculation, which will run in a directory called `hse_bands`.
 
-[Part 5 <--](https://ashtonmv.github.io/Part_5.html) | [--> Part 7](https://ashtonmv.github.io/Part_7.html)
+[Part 5 <--](Part_5.html) | [--> Part 7](Part_7.html)
