@@ -20,4 +20,4 @@ as you go through the objectives.
 If you run into software issues with any of the examples, please just post
 an issue to the [issues page of this repository](https://github.com/ashtonmv/ashtonmv.github.io/issues).
 
-# [Okay let's get started!](https://github.com/ashtonmv/ashtonmv.github.io/Part_1.html)
+# [Okay let's get started!](https://ashtonmv.github.io/Part_1.html)
