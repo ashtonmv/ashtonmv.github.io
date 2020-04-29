@@ -167,4 +167,4 @@ This file is just like the job.log, but with a little less clutter (and, consequ
 
 The vasprun.xml is not designed for human-readability, but is very easy for a Python program like Pymatgen to parse. Like the OUTCAR, it contains all of the information about your calculation.
 
-[Part 4 <--](https://ashtonmv.github.io/Part_4.html) | [--> Part 6](https://ashtonmv.github.io/Part_6.html)
+[Part 4 <--](Part_4.html) | [--> Part 6](Part_6.html)
