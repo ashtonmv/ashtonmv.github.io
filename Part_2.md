@@ -1,5 +1,4 @@
 # Part 2: Learn Linux, Python and vim/emacs
-[Previous](https://github.com/henniggroup/Getting-Started/blob/master/objectives/Part_1.md) | [Next](https://github.com/henniggroup/Getting-Started/blob/master/objectives/Part_3.md)
 
 You haven't given up after day one, which is a great sign!
 
