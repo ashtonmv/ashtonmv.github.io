@@ -1,3 +1,5 @@
 theme: jekyll-theme-midnight
 title: Hennig Materials Theory
 description: Instructions and exercises for new members in the Hennig Materials Theory Group at UF
+github:
+  is_project_page: false
