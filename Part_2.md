@@ -26,4 +26,4 @@ text files from the command line environment and you will use them all the time.
 are several good tutorials out there, like [openvim](https://openvim.com) and
 [GNU's emacs tour](https://www.gnu.org/software/emacs/tour/).
 
-[Part 1 <--](https://ashtonmv.github.io/Part_1.html) | [--> Part 3](https://ashtonmv.github.io/Part_3.html)
+[Part 1 <--](Part_1.html) | [--> Part 3](Part_3.html)
