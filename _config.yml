@@ -2,9 +2,9 @@
 title: Michael Ashton
 email: ashton@mpie.de
 url: https://ashtonmv.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "Science, Software, "
-skills: "Materials Scientist - Programmer - Web Designer"
+description: ""
+keywords: "Science, Software, Materials, Programmer, Coding, Development, Resume, CV, Physics, Research"
+skills: "Science - Software - Some other stuff"
 meta_author: Ashton Michael
 
 # Google webmaster tools
@@ -28,7 +28,7 @@ color:
   primary: 06AED5 #80B3FF
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 272727 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  secondary-dark: FED766 #A2122F
 
 # Footer settings
 footer:
