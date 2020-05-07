@@ -1,24 +1,32 @@
-Welcome to the Hennig materials theory group! This repository exists to help
-new users to understand the computational methods being used in the group and
-to get started researching their own materials.
+Freelancer Jekyll theme  [![Build Status](https://api.travis-ci.org/jeromelachaud/freelancer-theme.svg?branch=master)](https://travis-ci.org/jeromelachaud/freelancer-theme/) 
+=========================
 
-# How to use this repository
-Below you have access to several tutorial "objectives" that cover a number of topics relevant
-to performing research efficiently during your time in the group (and hopefully beyond!)
+Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/template-overviews/freelancer/)
 
-Each objective is intended to be roughly one day's work,
-but feel free to go through them at your own pace. The objectives are intended
-to take you from "zero to sixty" on a variety of different topics, and include everything
-from opening accounts on supercomputers to learning Linux & Python to running
-research grade density-functional theory calculations.
+## How to use
+ - Place a image in `/img/portfolio/`
+ - Replace `your-email@domain.com` in `_config.yml` with your email address. Refer to [formspree](http://formspree.io/) for more information.
+ - Create posts to display your projects. Use the follow as an example:
+```txt
+---
+layout: default
+modal-id: 1
+date: 2020-01-18
+img: cabin.png
+alt: image-alt
+project-date: January 2020
+client: The Client
+category: Web Development
+description: The description of the project
 
-You are probably already in touch with another member of the group who is acting
-as a kind of mentor right now- the idea is that you email them with any questions you have
-as you go through the objectives.
+---
+```
 
-If you run into software issues with any of the examples, please just post
-an issue to the [issues page of this repository](https://github.com/ashtonmv/ashtonmv.github.io/issues).
+## Demo
+View this jekyll theme in action [here](https://jeromelachaud.com/freelancer-theme)
 
-## [objectives](Part_1.html)
-## [extra setup options](Extras.html)
-## [some miscellaneous helpful commands](helpful_commands.html)
+## Screenshot
+![screenshot](https://raw.githubusercontent.com/jeromelachaud/freelancer-theme/master/screenshot.png)
+
+---------
+For more details, read the [documentation](http://jekyllrb.com/)
