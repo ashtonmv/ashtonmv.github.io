@@ -155,6 +155,10 @@ header .intro-text .skills {
     font-weight: 400;
 }
 
+.navbar a {
+    font-size: 1.5em;
+}
+
 .navbar a:focus {
     outline: 0;
 }
