@@ -1,7 +1,7 @@
 ---
 title: Half-Metallic 2D Materials
 layout: default
-modal-id: 4
+modal-id: 6
 date: 2020-05-07
 img: half-metals.png
 alt: image-alt
