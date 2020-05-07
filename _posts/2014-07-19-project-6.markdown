@@ -6,8 +6,7 @@ date: 2020-05-07
 img: evaporate.jpg
 alt: image-alt
 project-date: April 2020
+action: [Read the paper](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.106101) (Requires journal subscription)
 category: Research Paper
 description: Strong (10^10 V/m) electric fields capable of inducing atomic bond breaking represent a powerful tool for surface chemistry. However, their exact effects are difficult to predict due to a lack of suitable tools to probe their associated atomic-scale mechanisms. Here we introduce a generalized dipole correction for charged repeated-slab models that controls the electric field on both sides of the slab, thereby enabling direct theoretical treatment of field-induced bond-breaking events. As a prototype application, we consider field evaporation from a kinked W surface. We reveal two qualitatively different desorption mechanisms that can be selected by the magnitude of the applied field.
 ---
-
-[Read the whole paper](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.176801) (Requires journal subscription)
