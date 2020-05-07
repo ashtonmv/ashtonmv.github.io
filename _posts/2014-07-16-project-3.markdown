@@ -2,11 +2,11 @@
 title: Pyrho
 layout: default
 modal-id: 3
-date: 2014-07-16
+date: 2020-07-16
 img: pyrho.jpg
 alt: image-alt
 project-date: April 2020
 category: Software Development
-action: [Check out the project](https://github.com/ashtonmv/pyrho)
+action: <a href="https://github.com/ashtonmv/pyrho">Check out the project</a>
 description: Pyrho is a real-space DFT code written in Python. It is not built to be super-fast or scalable- instead, it is built to be super-readable. In the last few decades, thousands of Ph.D.'s have been given to hard-working theoreticians who solved complex scientific problems using density functional theory (DFT) codes that they don't really understand. Pyrho exists to make the "under-the hood" foundation for most DFT codes accessible to those of us who aren't brave enough to dive into the source code of research grade DFT software packages.
 ---
