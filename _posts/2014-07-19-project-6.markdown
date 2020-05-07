@@ -3,7 +3,7 @@ title: Breaking bonds with an electric field
 layout: default
 modal-id: 6
 date: 2020-05-07
-img: evaporate.jpg
+img: evaporate.png
 alt: image-alt
 project-date: April 2020
 action: <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.106101">Read the paper</a><p>(Requires journal subscription)</p>

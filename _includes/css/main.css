@@ -212,8 +212,8 @@ section.success {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    background: #FED76690;
+    opacity: 90;
+    background: #FED766;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
