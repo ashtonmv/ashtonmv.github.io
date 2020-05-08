@@ -93,12 +93,12 @@ header .container {
 }
 
 header img {
-    display: block;
+    display: inline-block;
     margin: 0 auto 20px;
 }
 
 header .intro-text .name {
-    display: block;
+    display: inline-block;
     /* text-transform: uppercase; */
     font-family: "Lobster Two","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
