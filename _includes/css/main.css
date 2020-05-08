@@ -197,13 +197,13 @@ section h2 {
     font-size: 3em;
 }
 
+section.success .pg-canvas {
+    position: fixed !important;
+}
+
 section.success {
     color: #fff;
-    background-image: url('{{ site.baseurl }}/img/about-bg.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #{{ site.color.secondary }};
 }
 
 section.success p {
