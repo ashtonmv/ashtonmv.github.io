@@ -85,8 +85,8 @@ hr.star-primary:after {
     position: fixed;
 }
 
-.header .pg-canvas .intro-text .name {
-    position: fixed;
+.header .pg-canvas .container {
+    position: fixed !important;
 }
 
 .header {
