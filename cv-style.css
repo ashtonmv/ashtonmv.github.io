@@ -23,7 +23,7 @@ p {
 }
 
 a {
-	color: #4BB4FF;
+	color: #1D2F6F;
 	text-decoration: None;
 }
 
@@ -90,7 +90,7 @@ a {
 }
 
 a, a[href^=tel] {
-	color: #4BB4FF; 
+	color: #1D2F6F; 
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
@@ -100,12 +100,12 @@ a, a[href^=tel] {
 }
 
 a:hover { 
-	color: #FFCB47;
+	color: #4BB4FF;
 }
 
 
 section {
-	border-top: 1px solid #4BB4FF;
+	border-top: 1px solid #1D2F6F;
 	padding: 20px 0 0;
 }
 
@@ -131,7 +131,7 @@ section:last-child {
 	font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 1.5em;
-	color: #FFCB47;
+	color: #1D2F6F;
 }
 
 .sectionContent h2 {
