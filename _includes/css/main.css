@@ -87,13 +87,10 @@ header {
     background: #{{ site.color.primary }};
 }
 
-header .pg-canvas {
-    display: inline-block;
-}
-
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
+    display: inline-flex;
 }
 
 header img {
