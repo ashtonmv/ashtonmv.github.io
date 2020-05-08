@@ -151,6 +151,8 @@ header .intro-text .skills {
 
 .navbar {
     /* text-transform: uppercase; */
+    background-color: #fff;
+    color: #{{ site.color.secondary }};
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
 }
@@ -218,14 +220,14 @@ section.success {
     height: 100%;
     opacity: 0;
     background: #fff;
-    border: 2px solid #{{ site.color.secondary }}
+    border: 2px solid #{{ site.color.secondary }};
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 0.8;
+    opacity: 0.95;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
