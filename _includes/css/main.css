@@ -191,7 +191,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background-image: url('{{ site.baseurl }}/img/lightroast.png');
+    background-image: url('{{ site.baseurl }}/img/portfolio/lightroast.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
