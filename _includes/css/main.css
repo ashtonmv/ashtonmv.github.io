@@ -110,10 +110,6 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
-#particles {
-    display: inline;
-}
-
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
