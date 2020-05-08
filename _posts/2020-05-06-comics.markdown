@@ -1,7 +1,7 @@
 ---
-title: Light Roast Comics
+title: Just for fun
 layout: default
-modal-id: 5
+modal-id: 6
 date: 2020-05-07
 img: lightroast.png
 alt: image-alt

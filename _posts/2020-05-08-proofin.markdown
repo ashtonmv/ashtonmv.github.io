@@ -1,0 +1,12 @@
+---
+title: Proofin
+layout: default
+modal-id: 1
+date: 2020-05-07
+img: proofin.png
+alt: image-alt
+project-date: April 2017
+action: <a href="http://proofin.herokuapp.com">Visit the site</a>
+category: Web Development
+description: Proofin enables ESL professionals to translate and strengthen their official documents (CV's, cover letters, etc.) for a variety of purposes.
+---
