@@ -81,6 +81,10 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+.pg-canvas {
+    display: inline;
+}
+
 header {
     text-align: center;
     color: #fff;
