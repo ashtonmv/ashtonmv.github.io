@@ -82,10 +82,10 @@ hr.star-primary:after {
 }
 
 .pg-canvas {
-    position: absolute;
+    position: fixed;
 }
 
-.header .pg-canvas{
+.header .pg-canvas {
     position: fixed !important;
 }
 
