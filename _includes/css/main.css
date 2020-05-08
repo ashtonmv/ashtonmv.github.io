@@ -84,7 +84,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #{{ site.color.secondary-dark }};
-    background: #{{ site.color.primary }};
+    background: #FFFFFF;
 }
 
 header .container {
@@ -350,7 +350,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #fff;
+    color: #{{ site.color.secondary }};
 }
 
 footer h3 {
@@ -360,7 +360,7 @@ footer h3 {
 footer .footer-above {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #fff;
 }
 
 footer .footer-col {
