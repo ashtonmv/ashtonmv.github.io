@@ -191,7 +191,11 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: None;
+    background-image: url("img/lightroast.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section.success p {
