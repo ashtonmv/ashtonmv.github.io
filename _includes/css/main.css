@@ -10,7 +10,7 @@ body {
 
 p {
     font-size: 20px;
-    color: #{{ site.color.secondary-dark }} !important;
+    color: #{{ site.color.secondary-dark }};
 }
 
 p.small {
@@ -188,8 +188,12 @@ section h2 {
 }
 
 section.success {
-    color: #fff !important;
+    color: #fff;
     background: #{{ site.color.secondary }};
+}
+
+section.success p {
+    color: #fff !important;
 }
 
 @media(max-width:767px) {
