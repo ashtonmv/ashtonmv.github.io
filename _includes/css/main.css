@@ -6,7 +6,6 @@
 
 body {
     overflow-x: hidden;
-    background-color: #{{ site.color.secondary }};
 }
 
 p {
@@ -89,6 +88,8 @@ hr.star-primary:after {
 
 header {
     position: fixed;
+    height: 100%;
+    width: 100%;
     text-align: center;
     color: #{{ site.color.secondary-dark }};
     background: #FFFFFF;
