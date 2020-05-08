@@ -81,15 +81,15 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-.header-wrapper {
-    height: 100%;
-    width: 100%;
+.header .pg-canvas {
+    position: fixed;
+}
+
+.header .pg-canvas .intro-text .name {
+    position: fixed;
 }
 
 .header {
-    position: fixed;
-    height: 100%;
-    width: 100%;
     text-align: center;
     color: #{{ site.color.secondary-dark }};
     background: #FFFFFF;
@@ -107,7 +107,6 @@ hr.star-primary:after {
 
 .header .intro-text .name {
     display: block;
-    /* text-transform: uppercase; */
     font-family: "Lobster Two","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 400;
@@ -219,10 +218,6 @@ section.success p {
     section.first {
         padding-top: 75px;
     }
-}
-
-#portfolio {
-    padding-top: 300px;
 }
 
 #portfolio .portfolio-item {
