@@ -10,10 +10,6 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
-    <!-- Particle background stuff -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/jquery.particleground.min.js"></script>
-
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="{{ "/style.css" }}">
 
@@ -35,6 +31,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Particle background stuff -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.particleground.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#particles').particleground({
