@@ -82,7 +82,7 @@ hr.star-primary:after {
 }
 
 .pg-canvas {
-    position: fixed;
+    position: absolute;
 }
 
 .header .pg-canvas {
@@ -106,6 +106,7 @@ hr.star-primary:after {
 }
 
 .header .intro-text .name {
+    position: fixed;
     display: block;
     font-family: "Lobster Two","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
