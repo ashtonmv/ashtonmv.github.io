@@ -22,6 +22,11 @@ p {
 	color: #444;
 }
 
+a {
+	color: #4BB4FF;
+	text-decoration: None;
+}
+
 #cv {
 	width: 90%;
 	max-width: 800px;
@@ -31,7 +36,7 @@ p {
 
 .mainDetails {
 	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
+	border-bottom: 2px solid #FFCB47;
 	background: #ededed;
 }
 
@@ -84,8 +89,8 @@ p {
 	color: #444;
 }
 
-#contactDetails ul li a, a[href^=tel] {
-	color: #444; 
+a, a[href^=tel] {
+	color: #4BB4FF; 
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
@@ -94,13 +99,13 @@ p {
 	transition: all .3s ease-in;
 }
 
-#contactDetails ul li a:hover { 
-	color: #{{ site.color.primary }};
+a:hover { 
+	color: #FFCB47;
 }
 
 
 section {
-	border-top: 1px solid #{{ site.color.secondary }};
+	border-top: 1px solid #4BB4FF;
 	padding: 20px 0 0;
 }
 
@@ -126,7 +131,7 @@ section:last-child {
 	font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 1.5em;
-	color: #{{ site.color.primary }};
+	color: #FFCB47;
 }
 
 .sectionContent h2 {
