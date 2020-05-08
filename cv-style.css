@@ -155,6 +155,10 @@ section:last-child {
 	margin-bottom: 3px;
 }
 
+.ref {
+	font-style: italic !important;
+}
+
 @media all and (min-width: 602px) and (max-width: 800px) {
 	#headshot {
 		display: none;
