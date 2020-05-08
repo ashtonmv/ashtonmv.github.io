@@ -1,0 +1,10 @@
+---
+title: Just for fun
+layout: default
+modal-id: 6
+date: 2020-01-06
+img: lightroast.png
+alt: image-alt
+action: <a href="http://lightroastcomics.com">Read the comics</a>
+description: I started making comics in 2018, and discovered that I really loved doing it! A few of the comics I make have to do with science, but most do not. Most people don't find materials science as entertaining as I do.
+---
