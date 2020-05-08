@@ -81,10 +81,6 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-.pg-canvas {
-    display: inline;
-}
-
 header {
     text-align: center;
     color: #fff;
@@ -92,8 +88,12 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
 }
 
 header img {
