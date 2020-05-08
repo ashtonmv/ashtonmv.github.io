@@ -90,7 +90,7 @@ hr.star-primary:after {
 }
 
 .header {
-    text-align: center;
+    text-align: center !important;
     color: #{{ site.color.secondary-dark }};
     background: #FFFFFF;
 }
@@ -106,7 +106,6 @@ hr.star-primary:after {
 }
 
 .header .intro-text .name {
-    position: fixed;
     display: block;
     font-family: "Lobster Two","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
