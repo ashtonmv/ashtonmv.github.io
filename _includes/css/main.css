@@ -190,7 +190,7 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
+    /* color: #fff; */
     background: None;
 }
 
