@@ -22,11 +22,6 @@ p {
 	color: #444;
 }
 
-a {
-	color: #1D2F6F;
-	text-decoration: None;
-}
-
 #cv {
 	width: 90%;
 	max-width: 800px;
@@ -105,7 +100,7 @@ a:hover {
 
 
 section {
-	border-top: 1px solid #1D2F6F;
+	border-top: 1px solid #FFCB47;
 	padding: 20px 0 0;
 }
 
