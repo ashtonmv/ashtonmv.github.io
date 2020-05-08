@@ -350,7 +350,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #{{ site.color.secondary-dark }};
+    color: #fff;
 }
 
 footer h3 {
