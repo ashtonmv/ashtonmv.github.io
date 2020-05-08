@@ -157,7 +157,7 @@ header .intro-text .skills {
 }
 
 .navbar a {
-    color: #{{ site.color.secondary }};
+    color: #{{ site.color.secondary }} !important;
     font-size: 1.5em;
 }
 
