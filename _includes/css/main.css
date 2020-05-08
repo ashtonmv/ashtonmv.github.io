@@ -152,7 +152,7 @@ header .intro-text .skills {
 .navbar {
     /* text-transform: uppercase; */
     background-color: #fff;
-    color: #{{ site.color.secondary }};
+    color: #{{ site.color.secondary }} !important;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
 }
