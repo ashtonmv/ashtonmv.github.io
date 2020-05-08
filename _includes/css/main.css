@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: #{{ site.color.secondary }};
 }
 
 p {
@@ -189,7 +190,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #{{ site.color.secondary }};
+    background: None;
 }
 
 section.success p {
