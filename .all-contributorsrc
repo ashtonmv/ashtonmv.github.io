@@ -1,6 +1,5 @@
 {
   "files": [
-    "README.md",
     "CONTRIBUTORS.md"
   ],
   "imageSize": 100,
@@ -12,7 +11,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/16377664?v=4",
       "profile": "http://michael-ashton.com",
       "contributions": [
-        "code"
+        "code",
+        "design"
       ]
     }
   ],
