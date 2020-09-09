@@ -85,6 +85,14 @@ hr.star-primary:after {
     position: absolute;
 }
 
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .header .pg-canvas {
     position: fixed !important;
 }
@@ -112,7 +120,7 @@ hr.star-primary:after {
     font-weight: 400;
 }
 
-.header .intro-text .skills {
+.header .intro-text .description {
     font-size: 1.25em;
     font-weight: 300;
 }
@@ -127,9 +135,29 @@ hr.star-primary:after {
         font-size: 4.75em;
     }
 
-    .header .intro-text .skills {
+    .header .intro-text .description {
         font-size: 1.75em;
     }
+}
+
+.nav-icon {
+    font-size: 24px;
+    padding: 40px 10px 6px 10px;
+    margin: 0 auto;
+    border: 2px solid rgba(255,255,255,0);
+    border-radius: 20px;
+    color: #2C4251;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-icon:hover {
+    text-decoration: None !important;
+    color: #4BB4FF;
+    transition: .2s ease-in-out;		
+}
+
+.formbutton:hover {
+    color: white;
 }
 
 @media(min-width:768px) {
@@ -154,6 +182,10 @@ hr.star-primary:after {
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+}
+
+#formbutton {
+    font-size: 14px;
 }
 
 .navbar {
@@ -189,7 +221,7 @@ section {
     z-index: 5;
     position: relative;
     background: #fff;
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
 section h2 {
@@ -199,7 +231,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background-image: url('{{ site.baseurl }}/img/about-bg.png');
+    background-image: url('{{ site.url }}/img/about-bg.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -212,7 +244,7 @@ section.success p {
 
 @media(max-width:767px) {
     section {
-        padding: 75px 0;
+        padding: 40px 0;
     }
 
     section.first {
@@ -291,7 +323,7 @@ section.success p {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
+    /* border: solid 2px #fff; */
     color: #{{ site.color.primary }};
     background: #fff;
 }
@@ -390,7 +422,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #{{ site.color.secondary-dark }};
+    color: #{{ site.color.secondary }};
 }
 
 .btn-social {

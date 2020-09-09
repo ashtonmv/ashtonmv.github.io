@@ -1,6 +1,6 @@
 ---
 title: MaterialsWeb
-layout: default
+layout: home
 modal-id: 2
 date: 2020-01-02
 img: materialsweb.png

@@ -1,6 +1,6 @@
 ---
 title: Research Projects
-layout: default
+layout: home
 modal-id: 1
 date: 2020-01-01
 img: half-metals.png

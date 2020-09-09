@@ -1,6 +1,6 @@
 ---
 title: Just for fun
-layout: default
+layout: home
 modal-id: 6
 date: 2020-01-06
 img: lightroast.png
