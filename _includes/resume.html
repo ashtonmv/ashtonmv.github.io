@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ site.title }} - Curriculum Vitae</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="The Curriculum Vitae of {{ site.title }}."/>
+<meta charset="UTF-8"> 
+
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/cv-style.css">
+<script src="https://kit.fontawesome.com/1d40be1112.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body id="top">
+<div id="cv" class="instaFade particles">
+	<div class="mainDetails cv-section">
+		<div id="headshot" class="quickFade">
+			<img src="{{ site.baseurl }}/img/headshot.png" alt="{{ site.title }}" />
+		</div>
+		
+		<div id="name">
+			<h1 class="quickFade delayTwo">{{ site.data.cv.name }}</h1>
+			<h2 class="quickFade delayThree">{{ site.data.cv.role }}</h2>
+			<a class="quickFade delayFour" href="/static/CV-Michael-Ashton.pdf" download><i class="fa fa-download"></i></a>
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li><i class="fas fa-envelope"></i><a href="mailto:{{ site.email }}" target="_blank"> {{ site.email }}</a></li>
+				<li><i class="fas fa-globe"></i><a href="{{ site.url }}"> {{ site.url }}</a></li>
+				<li><i class="fas fa-phone"></i> {{ site.phone }}</li>
+				<li><i class="fas fa-home"></i> {{ site.address }}</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="mainArea" class="quickFade delayFive">
+		<section class="cv-section">
+			<article>
+				<div class="sectionTitle">
+					<h1>Personal Profile</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p>{{ site.data.cv.personal-profile }}</p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+
+		<section class="cv-section">
+			<div class="sectionTitle">
+				<h1>Skills</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<ul class="keySkills">
+					{% for skill in site.data.cv.skills %}
+						<li>{{ skill }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>		
+		
+		<section class="cv-section">
+			<div class="sectionTitle">
+				<h1>Education and Research</h1>
+			</div>
+			
+			<div class="sectionContent">
+				{% for position in site.data.cv.work-history %}
+				<article>
+					<h2>{{ position.title }}, {{ position.institute }}</h2>
+					<p class="subDetails">{{ position.dates }}</p>
+					{% for bullet in position.bullets %}
+						<p>{% if bullet.title %}{{ bullet.title }}: {% endif %}{{ bullet.info }}</p>
+					{% endfor %}
+				</article>
+				{% endfor %}
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		<section class="cv-section">
+			<div class="sectionTitle">
+				<h1>Selected Publications</h1>
+			</div>
+			
+			<div class="sectionContent">
+				{% for paper in site.data.cv.publications %}
+				<article>
+					<h2><a href="{{ paper.link }}">{{ paper.title }}</a>, <i class="ref">{{ paper.journal }}</i> 2020</h2>
+					<p>{{ paper.authors | replace: "Ashton, M.", "<b>Ashton, M.</b>" }}</p>
+				</article>
+				{% endfor %}
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section class="cv-section">
+			<div class="sectionTitle">
+				<h1>Awards and Other Work</h1>
+			</div>
+			
+			<div class="sectionContent">
+				{% for award in site.data.cv.awards %}
+					<li>{{ award }}</li>
+				{% endfor %}
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section class="cv-section">
+			<div class="sectionTitle">
+				<h1>References</h1>
+			</div>
+			
+			<div class="sectionContent">
+				{% for reference in site.data.cv.references %}
+					<li>{{ reference.name }}, {{ reference.position }} | <a href="mailto:{{ reference.email }}"><i class="fas fa-envelope"></i></a></li>
+				{% endfor %}
+			</div>
+			<div class="clear"></div>
+		</section>
+	</div>
+	</div>
+</div>
+
+{% include particles-cv.html %}
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
