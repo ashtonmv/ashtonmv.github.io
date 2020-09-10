@@ -7,11 +7,14 @@
 <meta name="description" content="The Curriculum Vitae of {{ site.title }}."/>
 <meta charset="UTF-8"> 
 
-<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+<link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">
 <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/cv-style.css">
+
 <script src="https://kit.fontawesome.com/1d40be1112.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+{% include particles-cv.html %}
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,7 +22,10 @@
 </head>
 <body id="top">
 <div id="cv" class="instaFade particles">
+	<div>
 	<div class="mainDetails cv-section">
+		{% include nav.html %}
+
 		<div id="headshot" class="quickFade">
 			<img src="{{ site.baseurl }}/img/headshot.png" alt="{{ site.title }}" />
 		</div>
@@ -41,7 +47,7 @@
 		<div class="clear"></div>
 	</div>
 	
-	<div id="mainArea" class="quickFade delayFive">
+	<div id="mainArea" class="quickFade">
 		<section class="cv-section">
 			<article>
 				<div class="sectionTitle">
@@ -132,9 +138,8 @@
 		</section>
 	</div>
 	</div>
+	</div>
 </div>
-
-{% include particles-cv.html %}
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

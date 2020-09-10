@@ -7,8 +7,8 @@
     formbutton("create", {
         title: "Contact Me",
         description: null,
-        buttonImg: "<i class='fas fa-comment-alt' style='font-size: 18px;'/>",
-        action: "{{ site.email }}",
+        buttonImg: "<i class='fas fa-comment-alt' style='font-size: 24px;'/>",
+        action: "https://formspree.io/mvowjbgy",
         theme: "classic",
         onResponse: function(ok, setStatus) {
             if (ok) {
@@ -40,18 +40,23 @@
         fontFamily:'"Roboto Slab", "Helvetica Neue", "Helvetica", "Arial"',
         fontSize: "14px",
         lineHeight: "1",
+        background: "rgba(255, 255, 255, 0.4)",
+        body: {
+            background: "white"
+        },
         button: {
-            border: "2px solid #{{ site.color.secondary }}",
-            background: "white",
-            color: "#{{ site.color.secondary }}",
+            border: "2px solid white",
+            borderRadius: "20px",
+            background: "none",
+            color: "white",
             boxShadow: "None",
-            width: "40px",
-            height: "40px"
+            width: "50px",
+            height: "50px"
         },
         title: {
             fontFamily: "Lobster Two",
-            background: "#{{ site.color.secondary }}",
-            color: "white",
+            background: "white",
+            color: "#{{ site.color.secondary }}",
             letterSpacing: "0.05em",
         },
         closeButton: {
