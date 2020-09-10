@@ -1,6 +1,6 @@
 ---
 title: EscapeCode
-layout: default
+layout: home
 modal-id: 5
 date: 2020-01-05
 img: escapecode.png

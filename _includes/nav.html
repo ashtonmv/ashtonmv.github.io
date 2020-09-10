@@ -1,35 +1,92 @@
-   <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
-            </div>
+<div id="nav" class="nav-row col-lg-12 {% if page.url == '/' %}quickFade{% else %}page-nav{% endif %}">
+    <a id="0-home" class="nav-icon firstFade fas fa-home" href="{{ site.url }}"></a>
+    <a id="1-about" class="nav-icon secondFade fas fa-address-card" href="{{ site.baseurl }}/about"></a>
+    <a id="2-projects" class="nav-icon thirdFade  fas fa-tools" href="{{ site.baseurl }}/projects"></a>
+    {% if page.url == "/cv/" %}
+        <a id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" style="background-color: rgba(255, 255, 255, 0.6)" href="{{ site.baseurl }}/cv"></a>
+    {% else %}
+        <a id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" href="{{ site.baseurl }}/cv"></a>
+    {% endif %}
+    <a id="4-github" class="nav-icon fifthFade delayFive fab fa-github-alt" href="https://github.com/ashtonmv" target="_blank"></a>
+    <a id="5-publications" class="nav-icon sixthFade fas fa-feather" href="https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en" target="_blank"></a>
+</div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Projects</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+<script>
+    if ("{{ highlight }}") {
+        $(".nav-icon#{{ highlight }}").css('background-color', 'rgba(255, 255, 255, 0.6)');
+    }
+    if ("{{ exclude }}") {
+        $(".nav-icon#{{ exclude }}").hide();
+    }
+</script>
+
+{% if exclude == "0-home" %}
+
+    <h1 class="typewrite">
+        <a id="typewrite" href="" class="typewrite" 
+        data-type='[ "Home", "About Me", "Projects", "Curriculum Vitae", "Github", "Publications" ]'>
+        <span class="wrap" id="wrap"></span>
+        </a>
+    </h1>
+
+    <script>
+        $(".nav-icon").on({
+            mouseenter: function () {
+                var index = this.id.split("-")[0];
+                var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
+                typewrite("#typewrite", fullTxt);
+            },
+            mouseleave: function () {
+                var index = this.id.split("-")[0];
+                console.log(index);
+                var txt = JSON.parse($("#typewrite").attr("data-type"))[index];
+                var Typer = new TxtType($("#typewrite"), "", txt);
+                Typer.wipe();
+            }
+        });
+
+        var TxtType = function(el, fullTxt, startTxt) {
+            this.el = el;
+            this.txt = startTxt;
+            this.fullTxt = fullTxt;
+        };
+
+        TxtType.prototype.type = function() {
+            if (this.txt.length < this.fullTxt.length) {
+                this.txt = this.fullTxt.substring(0, this.txt.length + 1);
+                this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
+            } else {
+                return;
+            };
+            var that = this;
+            setTimeout(function() {
+                that.type();
+            }, 50);
+        };
+
+        TxtType.prototype.wipe = function() {
+            if (this.txt.length) {
+                this.txt = this.txt.substring(0, this.txt.length - 1);
+                this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
+            } else {
+                this.el.html('<span class="wrap" id="wrap">'+this.txt+'</span>');
+                return;
+            };
+            var that = this;
+            setTimeout(function() {
+                that.wipe();
+            }, 20);        
+        };
+
+        function typewrite(typewriterID, fullTxt) {
+            var typewriter = $(typewriterID);
+            var fullTxt = fullTxt;
+            var period = typewriter.attr('data-period');
+            if (fullTxt) {
+                var Typer = new TxtType(typewriter, fullTxt, '');
+                Typer.type();
+            }
+        };
+
+    </script>
+{% endif %}

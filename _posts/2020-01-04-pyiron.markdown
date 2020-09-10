@@ -1,0 +1,11 @@
+---
+title: pyiron
+layout: home
+modal-id: 4
+date: 2020-01-04
+img: pyiron.png
+alt: image-alt
+action: <a href="https://pyiron.org">Visit the site</a>
+category: Web Development
+description: pyiron is an integrated development environment (IDE) for computational materials science. I built the pyiron website in jekyll (like this site!) and have written a few submodules for the code.
+---

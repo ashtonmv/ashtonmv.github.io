@@ -1,6 +1,28 @@
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="page particles">
+    <div class="container">
+        {% assign highlight="2-projects" %}
+        {% include nav.html %}
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Projects</h2>
+            </div>
+        </div>
+        <div class="portfolio-row">
+            {% for post in site.posts reversed %}
+                <div class="portfolio-item">
+                    <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                        <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
  <!-- Portfolio Modals -->
  {% for post in site.posts %}
-    <script>alert("trying");</script>
     <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -14,7 +36,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
-                            <hr class="star-primary">
+                            <hr>
                             <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                             {% if post.description %}
                                 <p>{{ post.description }}</p>
@@ -22,7 +44,6 @@
                             {% if post.action %}
                                 <p>{{ post.action }}</p>
                             {% endif %}
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
