@@ -82,14 +82,17 @@
 			</div>
 			
 			<div class="sectionContent">
+				{% assign i=0 %}
 				{% for position in site.data.cv.work-history %}
-				<article>
-					<h2>{{ position.title }}, {{ position.institute }}</h2>
-					<p class="subDetails">{{ position.dates }}</p>
-					{% for bullet in position.bullets %}
-						<p>{% if bullet.title %}{{ bullet.title }}: {% endif %}{{ bullet.info }}</p>
-					{% endfor %}
-				</article>
+					{% if i != 0%}<hr>{% endif %}
+					{% assign i = i | plus:1 %}
+					<article>
+						<h2>{{ position.title }}, {{ position.institute }}</h2>
+						<p class="subDetails">{{ position.dates }}</p>
+						{% for bullet in position.bullets %}
+							<p>{% if bullet.title %}{{ bullet.title }}: {% endif %}{{ bullet.info }}</p>
+						{% endfor %}
+					</article>
 				{% endfor %}
 			</div>
 			<div class="clear"></div>
@@ -101,11 +104,15 @@
 			</div>
 			
 			<div class="sectionContent">
+				{% assign i=0 %}
 				{% for paper in site.data.cv.publications %}
-				<article>
-					<h2><a href="{{ paper.link }}">{{ paper.title }}</a>, <i class="ref">{{ paper.journal }}</i> 2020</h2>
-					<p>{{ paper.authors | replace: "Ashton, M.", "<b>Ashton, M.</b>" }}</p>
-				</article>
+					{% if i != 0%}<hr>{% endif %}
+					{% assign i = i | plus:1 %}
+					<article>
+						<h2><a href="{{ paper.link }}">{{ paper.title }}</a></h2>
+						<p class="subDetails">{{ paper.journal }}, {{ paper.year }}</p>
+						<p>{{ paper.authors | replace: "Ashton, M.", "<b>Ashton, M.</b>" }}</p>
+					</article>
 				{% endfor %}
 			</div>
 			<div class="clear"></div>
@@ -117,8 +124,14 @@
 			</div>
 			
 			<div class="sectionContent">
+				{% assign i=0 %}
 				{% for award in site.data.cv.awards %}
-					<li>{{ award }}</li>
+					{% if i != 0%}<hr>{% endif %}
+					{% assign i = i | plus:1 %}
+					<h2>{{ award.title }}</h2>
+					{% for bullet in award.bullets %}
+						<p>{{ bullet }}</p>
+					{% endfor %}
 				{% endfor %}
 			</div>
 			<div class="clear"></div>
@@ -130,8 +143,11 @@
 			</div>
 			
 			<div class="sectionContent">
+				{% assign i=0 %}
 				{% for reference in site.data.cv.references %}
-					<li>{{ reference.name }}, {{ reference.position }} | <a href="mailto:{{ reference.email }}"><i class="fas fa-envelope"></i></a></li>
+					{% if i != 0%}<hr>{% endif %}
+					{% assign i = i | plus:1 %}
+					<p>{{ reference.name }}, {{ reference.position }} | <a href="mailto:{{ reference.email }}"><i class="fas fa-envelope"></i></a></p>
 				{% endfor %}
 			</div>
 			<div class="clear"></div>

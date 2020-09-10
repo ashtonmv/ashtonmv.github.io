@@ -35,8 +35,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 		position: relative;
 		border: none;
 		border-radius: 20px 20px 20px 20px;
-		background: rgba(44, 66, 81, 0.5);
+		background: rgba(44, 66, 81, 0.4);
 		z-index: 2000;
+	}
+
+	.cv-section h2 {
+		padding-bottom: 10px;
 	}
 
 	.clear {
@@ -155,7 +159,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	}
 	
 	a, a[href^=tel] {
-		color: #2C4251;
+		color: white;
 		text-decoration: underline;
 		-webkit-transition: all .3s ease-in;
 		-moz-transition: all .3s ease-in;
@@ -165,7 +169,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	}
 	
 	a:hover { 
-		color: white;
+		color: #4bb4ff;
 	}
 	
 	
