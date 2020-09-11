@@ -31,11 +31,10 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	.cv-section {
 		padding: 25px 25px !important;
 		margin: 0px 0px 20px 0px !important;
-		/* background: white; */
 		position: relative;
-		border: none;
+		border: 2px solid white;
 		border-radius: 20px 20px 20px 20px;
-		background: rgba(44, 66, 81, 0.4);
+		background: rgba(255, 255, 255, 0.2);
 		z-index: 2000;
 	}
 
@@ -189,10 +188,6 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	section {
 		border-top: 2px solid #{{ site.color.primary }};
 		padding: 20px 0 0;
-	}
-	
-	section:first-child {
-		border-top: 0;
 	}
 	
 	section:last-child {
