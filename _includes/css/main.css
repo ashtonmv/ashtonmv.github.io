@@ -23,7 +23,8 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #{{ site.color.secondary }};
+    color: white;
+    text-decoration: underline;
 }
 
 h1,
@@ -57,16 +58,20 @@ h6 {
     height: 100%;
     text-align: center !important;
     color: white;
-    background: #{{ site.color.primary }};
 }
 
-.header .pg-canvas {
+.page-title {
+    text-align: center;
+}
+
+.pg-canvas {
     position: fixed !important;
+    background: linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
 }
 
-.header .container {
+.container {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .header img {
@@ -109,27 +114,45 @@ h6 {
     /* max-width: 350px; */
     text-align: center;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
 }
 
-.nav-row.page-nav {
+.page-nav {
     background: rgba(255, 255, 255, 0.2);
     position: relative;
-    top: -100px;
-    padding: 120px 35px 35px 35px !important;
-    border-radius: 10px 10px 20px 20px;
+    top: -120px;
+    padding: 50px 35px 35px 35px !important;
+    border-radius: 20px 20px 20px 20px;
     border: 2px solid white;
+}
+
+.nav-break {
+   flex-basis: 100%;
+   height: 0;
+}
+
+@media(min-width:{{ site.style.flex-transition }}) {
+    .nav-break {
+        flex-basis: 0%;
+        height: 0;
+    }
+
+    .nav-row {
+        justify-content: space-between;
+    }
 }
 
 .nav-icon {
     text-decoration: none !important;
-    display: table-cell;
     font-size: 20px;
     line-height: 50px;
     height: 50px;
     width: 50px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 13px 10px 6px 10px !important;
     border: 2px solid white;
     border-radius: 20px;
@@ -145,14 +168,17 @@ h6 {
 }
 
 .typewrite {
-    font-size: 1.5em;
+    font-size: 2em;
     color: white;
-    margin-top: 75px;
+    margin-top: 150px;
     /* padding-top: 100px; */
     position: relative;
-    background: None;
-    border: None;
+    background: none;
     font-family: "Lobster Two";
+}
+
+.typewrite a {
+    text-decoration: None;
 }
 
 .blinking-cursor {
@@ -173,35 +199,6 @@ h6 {
 @keyframes blink{
 	0%, 100% {border-right-color: rgba(255, 255, 255, 0);}
 	50% {border-right-color: rgba(255, 255, 255, 1);}
-}
-
-.navbar {
-    /* text-transform: uppercase; */
-    background-color: #fff;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-}
-
-.navbar a {
-    color: #{{ site.color.secondary }} !important;
-    font-size: 1.5em;
-}
-
-.navbar a:focus {
-    outline: 0;
-}
-
-.navbar .navbar-nav {
-    letter-spacing: 1px;
-}
-
-.navbar .navbar-nav li a:focus {
-    outline: 0;
-}
-
-.navbar-default,
-.navbar-inverse {
-    border: 0;
 }
 
 section {
@@ -226,16 +223,6 @@ section.page {
     background: #{{ site.color.primary }};
 }
 
-@media(max-width:{{ site.style.transition }}) {
-    section {
-        padding: 40px 0;
-    }
-
-    section.first {
-        padding-top: 75px;
-    }
-}
-
 .portfolio-row {
     display: flex;
     flex-direction: row;
@@ -244,18 +231,13 @@ section.page {
     position: relative;
 }
 
-.portfolio-row > div {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-}
-
 .portfolio-item {
+    max-width: 300px;
+    margin: 10px;
     padding: 10px 15px 10px 15px;
     border-radius: 20px;
-    transition: 0.5s ease-in-out;
+    border: 2px solid white;
+    transition: 0.2s ease-in-out;
 }
 
 .portfolio-item h2 {
@@ -265,7 +247,7 @@ section.page {
 .portfolio-item:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.4);
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 /* 
@@ -273,7 +255,7 @@ section.page {
     position: absolute;
     /* display: table-cell;
     width: 100%;
-    height: 100%; */
+    height: 100%;
     opacity: 0;
     background: #fff;
     border: 2px solid #{{ site.color.secondary }};
@@ -616,86 +598,88 @@ footer .footer-below {
     }
 }
 
-.firstFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in;
-    
-    -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 1s;
-    -moz-animation-timing-function: ease-in;
-    
-    animation-name: reset, fade-in;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-}
+@media(min-width:{{ site.style.flex-transition }}) {
+    .firstFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+    }
 
-.secondFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1.2s;
-    -webkit-animation-timing-function: ease-in;
-    
-    -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 1.2s;
-    -moz-animation-timing-function: ease-in;
-    
-    animation-name: reset, fade-in;
-    animation-duration: 1.2s;
-    animation-timing-function: ease-in;
-}
+    .secondFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1.2s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1.2s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-in;
+    }
 
-.thirdFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1.4s;
-    -webkit-animation-timing-function: ease-in;
+    .thirdFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1.4s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1.4s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1.4s;
+        animation-timing-function: ease-in;
+    }
     
-    -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 1.4s;
-    -moz-animation-timing-function: ease-in;
-    
-    animation-name: reset, fade-in;
-    animation-duration: 1.4s;
-    animation-timing-function: ease-in;
-}
- 
-.fourthFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1.6s;
-    -webkit-animation-timing-function: ease-in;
-    
-    -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 1.6s;
-    -moz-animation-timing-function: ease-in;
-    
-    animation-name: reset, fade-in;
-    animation-duration: 1.6s;
-    animation-timing-function: ease-in;
-}
+    .fourthFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1.6s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1.6s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1.6s;
+        animation-timing-function: ease-in;
+    }
 
-.fifthFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 1.8s;
-    -webkit-animation-timing-function: ease-in;
-    
-    -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 1.8s;
-    -moz-animation-timing-function: ease-in;
-    
-    animation-name: reset, fade-in;
-    animation-duration: 1.8s;
-    animation-timing-function: ease-in;
-}
+    .fifthFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 1.8s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 1.8s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 1.8s;
+        animation-timing-function: ease-in;
+    }
 
-.sixthFade {
-    -webkit-animation-name: reset, fade-in;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-timing-function: ease-in;
-    
-    -moz-animation-name: reset, fade-in;
-    -moz-animation-duration: 2s;
-    -moz-animation-timing-function: ease-in;
-    
-    animation-name: reset, fade-in;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
+    .sixthFade {
+        -webkit-animation-name: reset, fade-in;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-timing-function: ease-in;
+        
+        -moz-animation-name: reset, fade-in;
+        -moz-animation-duration: 2s;
+        -moz-animation-timing-function: ease-in;
+        
+        animation-name: reset, fade-in;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
 }

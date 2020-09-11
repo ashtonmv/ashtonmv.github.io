@@ -26,7 +26,8 @@ contact: formbutton
 # disqus_shortname: myshortname
 
 style:
-  transition: 500px
+  transition: 0px
+  flex-transition: 500px
 
 # Color settings (hex-codes without the leading hash-tag)
 color:

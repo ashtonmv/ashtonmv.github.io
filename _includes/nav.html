@@ -1,14 +1,15 @@
-<div id="nav" class="nav-row col-lg-12 {% if page.url == '/' %}quickFade{% else %}page-nav{% endif %}">
-    <a id="0-home" class="nav-icon firstFade fas fa-home" href="{{ site.baseurl }}"></a>
-    <a id="1-about" class="nav-icon secondFade fas fa-address-card" href="{{ site.baseurl }}/about"></a>
-    <a id="2-projects" class="nav-icon thirdFade  fas fa-tools" href="{{ site.baseurl }}/projects"></a>
+<div id="nav" class="nav-row {% if page.url == '/' %}quickFade{% else %}page-nav{% endif %}">
+    <div id="0-home" class="nav-icon firstFade fas fa-home" onclick="location.href='/';"></div>
+    <div id="1-about" class="nav-icon secondFade fas fa-address-card" onclick="location.href='{{ site.baseurl }}/about';"></div>
+    <div id="2-projects" class="nav-icon thirdFade  fas fa-tools" onclick="location.href='{{ site.baseurl }}/projects';"></div>
+    <div class="nav-break"></div>
     {% if page.url == "/cv/" %}
-        <a id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" style="background-color: rgba(255, 255, 255, 0.6)" href="{{ site.baseurl }}/cv"></a>
+        <div id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" style="background-color: rgba(255, 255, 255, 0.6)" onclick="location.href='{{ site.baseurl }}/cv';"></div>
     {% else %}
-        <a id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" href="{{ site.baseurl }}/cv"></a>
+        <div id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" onclick="location.href='{{ site.baseurl }}/cv';"></div>
     {% endif %}
-    <a id="4-github" class="nav-icon fifthFade delayFive fab fa-github-alt" href="https://github.com/ashtonmv" target="_blank"></a>
-    <a id="5-publications" class="nav-icon sixthFade fas fa-feather" href="https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en" target="_blank"></a>
+    <div id="4-github" class="nav-icon fifthFade delayFive fab fa-github-alt" onclick="window.open('https://github.com/ashtonmv', '_blank');"></div>
+    <div id="5-publications" class="nav-icon sixthFade fas fa-feather" onclick="window.open('https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en', '_blank');"></div>
 </div>
 
 <script>
