@@ -50,13 +50,13 @@ h6 {
 
 .pg-canvas {
     position: absolute;
-    background: rgb(255, 75, 75);
-    /* background: linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); */
-    /* background: -moz-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); FF 3.6+   */
-    /* background: -ms-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); IE10   */
-    /* background: -webkit-gradient(linear, top, bottom, color-stop(0%, rgba(75,216,255,1)), color-stop(100%, rgba(75,180,255,1))); Safari 4+, Chrome 2+   */
-    /* background: -webkit-linear-gradient(90deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); Safari 5.1+, Chrome 10+   */
-    /* background: -o-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); Opera 11.10  */
+    background: rgb(75,180,255,1);
+    background: linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
+    background: -moz-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* FF 3.6+ */  
+    background: -ms-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* IE10  */
+    background: -webkit-gradient(linear, top, bottom, color-stop(0%, rgba(75,216,255,1)), color-stop(100%, rgba(75,180,255,1))); /* Safari 4+, Chrome 2+ */
+    background: -webkit-linear-gradient(90deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* Safari 5.1+, Chrome 10+ */
+    background: -o-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* Opera 11.10  */
 }
 
 .header {
@@ -82,6 +82,14 @@ h6 {
     padding-bottom: 100px;
 }
 
+.page-container {
+    display: inherit;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
 .header img {
     display: block;
     margin: 0 auto 20px;
@@ -100,10 +108,10 @@ h6 {
 }
 
 @media(min-width:{{ site.style.transition }}) {
-    .header .container {
+    /* .header .container {
         padding-top: 200px;
         padding-bottom: 100px;
-    }
+    } */
 
     .header .intro-text .name {
         font-size: 4.75em;
@@ -132,7 +140,7 @@ h6 {
 .page-nav {
     background: rgba(255, 255, 255, 0.2);
     position: relative;
-    top: -120px;
+    top: -20px;
     padding: 50px 35px 35px 35px !important;
     border-radius: 20px 20px 20px 20px;
     border: 2px solid white;
