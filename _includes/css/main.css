@@ -52,12 +52,12 @@ h6 {
 .pg-canvas {
     position: absolute;
     background: rgb(75,180,255,1);
-    background: linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
-    background: -moz-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* FF 3.6+ */  
-    background: -ms-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* IE10  */
-    background: -webkit-gradient(linear, top, bottom, color-stop(0%, rgba(75,216,255,1)), color-stop(100%, rgba(75,180,255,1))); /* Safari 4+, Chrome 2+ */
-    background: -webkit-linear-gradient(90deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* Safari 5.1+, Chrome 10+ */
-    background: -o-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); /* Opera 11.10  */
+    background: linear-gradient(0deg, rgba(75,180,255,1) 0%, rgba(75,216,255,1) 100%);
+    /* background: -moz-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);  
+    background: -ms-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
+    background: -webkit-gradient(linear, top, bottom, color-stop(0%, rgba(75,216,255,1)), color-stop(100%, rgba(75,180,255,1)));
+    background: -webkit-linear-gradient(90deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
+    background: -o-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); */
 }
 
 .header {
