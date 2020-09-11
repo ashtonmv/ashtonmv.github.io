@@ -31,11 +31,15 @@
     </h1>
 
     <script>
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
         $(".nav-icon").on({
             mouseenter: function () {
                 var index = this.id.split("-")[0];
                 var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
-                typewrite("#typewrite", fullTxt);
+                delay(30).then(() => typewrite("#typewrite", fullTxt));
             },
             mouseleave: function () {
                 var index = this.id.split("-")[0];
