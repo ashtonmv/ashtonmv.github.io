@@ -1,27 +1,23 @@
-<div id="nav" class="nav-row {% if page.url == '/' %}quickFade{% else %}page-nav{% endif %}">
+<div id="nav" class="nav-row {% if pagename == '0-home' or pagename == '404' %}quickFade{% else %}page-nav{% endif %}">
     <div id="0-home" class="nav-icon firstFade fas fa-home" onclick="location.href='/';"></div>
     <div id="1-about" class="nav-icon secondFade fas fa-address-card" onclick="location.href='{{ site.baseurl }}/about';"></div>
     <div id="2-projects" class="nav-icon thirdFade  fas fa-tools" onclick="location.href='{{ site.baseurl }}/projects';"></div>
     <div class="nav-break"></div>
-    {% if page.url == "/cv/" %}
-        <div id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" style="background-color: rgba(255, 255, 255, 0.6)" onclick="location.href='{{ site.baseurl }}/cv';"></div>
-    {% else %}
-        <div id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" onclick="location.href='{{ site.baseurl }}/cv';"></div>
-    {% endif %}
+    <div id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" onclick="location.href='{{ site.baseurl }}/cv';"></div>
     <div id="4-github" class="nav-icon fifthFade delayFive fab fa-github-alt" onclick="window.open('https://github.com/ashtonmv', '_blank');"></div>
     <div id="5-publications" class="nav-icon sixthFade fas fa-feather" onclick="window.open('https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en', '_blank');"></div>
 </div>
 
 <script>
-    if ("{{ highlight }}") {
-        $(".nav-icon#{{ highlight }}").css('background-color', 'rgba(255, 255, 255, 0.6)');
-    }
-    if ("{{ exclude }}") {
-        $(".nav-icon#{{ exclude }}").hide();
+    if ("{{ pagename }}" == "0-home") {
+        $(".nav-icon#{{ pagename }}").hide();
+    } else if ("{{ pagename }}" != "404") {
+        $(".nav-icon#{{ pagename }}").css('background-color', 'rgba(255, 255, 255, 0.6)');
+        $(".nav-icon#{{ pagename }}").css('color', '#{{ site.color.primary }}');
     }
 </script>
 
-{% if exclude == "0-home" %}
+{% if pagename == "0-home" %}
 
     <h1 class="typewrite">
         <a id="typewrite" href="" class="typewrite" 
