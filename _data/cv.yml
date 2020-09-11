@@ -90,7 +90,7 @@ awards:
     title: Alexander von Humboldt award for Postdoctoral Researchers (2019)
     bullets: null
   - 
-    title: MaterialsWeb/MPInterfaces (2D Materials database)
+    title: MaterialsWeb / MPInterfaces (2D Materials database)
     bullets:
       - Designed and developed the <a href="https://materialsweb.org">Materialsweb online database</a>
       - Core developer for <a href="https://github.com/henniggroup/mpinterfaces">MPInterfaces</a> (the python backend for generating and analyzing materials data)
