@@ -68,7 +68,7 @@ h6 {
 
 .pg-canvas {
     position: fixed !important;
-    background: linear-gradient(0deg, rgba(75,216,255,0) 0%, rgba(75,180,255,1) 100%);
+    background: linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
 }
 
 .container {
