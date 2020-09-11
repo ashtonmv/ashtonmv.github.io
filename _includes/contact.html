@@ -14,7 +14,7 @@
             if (ok) {
             setStatus("Thanks for your message! I'll respond to the email address you supplied soon.");
             } else {
-            setStatus("<span style='color:red'>Oops! There was a problem. Please check that you've entered a valid email address.</span>");
+            setStatus("<span style='color:{{ site.color.primary }}'>Oops! There was a problem. Please check that you've entered a valid email address.</span>");
             }
         },
         fields: [{
@@ -39,7 +39,7 @@
         styles: {
         fontFamily:'"Roboto Slab", "Helvetica Neue", "Helvetica", "Arial"',
         fontSize: "14px",
-        color: "#{{ site.color.primary }}",
+        color: "{{ site.color.primary }}",
         lineHeight: "1",
         background: "rgba(255, 255, 255, 0.4)",
         body: {
@@ -57,7 +57,7 @@
         title: {
             fontFamily: "Lobster Two",
             background: "white",
-            color: "#{{ site.color.primary }}",
+            color: "{{ site.color.primary }}",
             letterSpacing: "0.05em",
         },
         closeButton: {

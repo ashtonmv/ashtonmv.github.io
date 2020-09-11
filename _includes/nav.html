@@ -1,3 +1,8 @@
+{% if pagename == "0-home" %}
+    {% assign nav-delay=0 %}
+{% else %}
+    {% assign nav-delay=0 %}
+{% endif %}
 <div id="nav" class="nav-row {% if pagename == '0-home' or pagename == '404' %}quickFade{% else %}page-nav{% endif %}">
     <div id="0-home" class="nav-icon firstFade fas fa-home" onclick="location.href='/';"></div>
     <div id="1-about" class="nav-icon secondFade fas fa-address-card" onclick="location.href='{{ site.baseurl }}/about';"></div>
@@ -27,24 +32,27 @@
     </h1>
 
     <script>
-        function delay(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
+        if (!window.matchMedia( "(hover: none)" ).matches) {
+            $(".nav-icon").on({
+                mouseenter: function () {
+                    var index = this.id.split("-")[0];
+                    var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
+                    typewrite("#typewrite", fullTxt);
+                },
+                mouseleave: function () {
+                    var index = this.id.split("-")[0];
+                    var txt = JSON.parse($("#typewrite").attr("data-type"))[index];
+                    var Typer = new TxtType($("#typewrite"), "", txt);
+                    Typer.wipe();
+                }
+            });
         }
 
-        $(".nav-icon").on({
-            mouseenter: function () {
-                var index = this.id.split("-")[0];
-                var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
-                delay(100).then(() => typewrite("#typewrite", fullTxt));
-            },
-            mouseleave: function () {
-                var index = this.id.split("-")[0];
-                console.log(index);
-                var txt = JSON.parse($("#typewrite").attr("data-type"))[index];
-                var Typer = new TxtType($("#typewrite"), "", txt);
-                Typer.wipe();
-            }
-        });
+        // $(".nav-icon").click(function() {
+        //     var index = this.id.split("-")[0];
+        //     var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
+        //     typewrite("#typewrite", fullTxt);
+        // });
 
         var TxtType = function(el, fullTxt, startTxt) {
             this.el = el;
@@ -88,6 +96,5 @@
                 Typer.type();
             }
         };
-
     </script>
 {% endif %}

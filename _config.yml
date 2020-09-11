@@ -31,12 +31,12 @@ style:
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 4BB4FF #FF6542 #E4572E #80B3FF
-  primary-rgb: "rgba(75, 180, 255, 1)" #"128,179,255"
-  secondary: 2C4251 #4BB4FF #FF521B #564154 #FED766 #FD6E8A
-  secondary-dark: 353531 #272727 #A2122F
-  particles: "rgba(255,255,255,0.5)"
-  particle-lines: "rgba(255,255,255,0.5)"
+  primary: rgba(255, 59, 45, 1) #ff3b2d
+  secondary: rgba(255, 95, 67) #ff4c1f
+
+  particles: rgba(255,255,255,0.5)
+  particle-lines: rgba(255,255,255,0.5)
+
 # Footer settings
 footer:
   copyright: Michael Ashton

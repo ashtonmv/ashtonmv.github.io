@@ -15,9 +15,9 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 		font-family: 'Roboto Slab', helvetica, arial, sans-serif;
 		font-size: 16px;
 		color: white;
-		background: linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
+		background: linear-gradient(0deg, {{ site.color.primary }} 0%, {{ site.color.secondary }} 100%);
 	}
-	
+
 	body {
 		background-size: cover;
 		background-repeat: none;
@@ -186,7 +186,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	}
 	
 	section {
-		border-top: 2px solid #{{ site.color.primary }};
+		border-top: 2px solid {{ site.color.primary }};
 		padding: 20px 0 0;
 	}
 	

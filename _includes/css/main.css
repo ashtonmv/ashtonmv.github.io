@@ -10,7 +10,7 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    background: rgb(75,180,255,1);
+    background: {{ site.color.primary }};
 }
 
 p {
@@ -51,13 +51,8 @@ h6 {
 
 .pg-canvas {
     position: absolute;
-    background: rgb(75,180,255,1);
-    background: linear-gradient(0deg, rgba(75,180,255,1) 0%, rgba(75,216,255,1) 100%);
-    /* background: -moz-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);  
-    background: -ms-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
-    background: -webkit-gradient(linear, top, bottom, color-stop(0%, rgba(75,216,255,1)), color-stop(100%, rgba(75,180,255,1)));
-    background: -webkit-linear-gradient(90deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%);
-    background: -o-linear-gradient(0deg, rgba(75,216,255,1) 0%, rgba(75,180,255,1) 100%); */
+    background: {{ site.color.primary }};
+    background: linear-gradient(0deg, {{ site.color.primary }} 0%, {{ site.color.secondary }} 100%);
 }
 
 .header {
@@ -128,7 +123,6 @@ h6 {
 }
 
 .nav-row {
-    /* max-width: 350px; */
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -200,7 +194,7 @@ h6 {
 }
 
 .blinking-cursor {
-    border-right: 0.1em solid rgba(255, 255, 255, 1);
+    border-right: 0.1em solid white;
     animation: blink 1000ms linear infinite;
 }
 
@@ -250,12 +244,14 @@ section.page {
 }
 
 .portfolio-item {
-    max-width: 300px;
+    max-width: 250px;
     margin: 10px;
     padding: 10px 15px 10px 15px;
     border-radius: 20px;
     border: 2px solid white;
     transition: 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.4);
+
 }
 
 .portfolio-item h2 {
@@ -264,7 +260,7 @@ section.page {
 
 .portfolio-item:hover {
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
     transition: 0.2s ease-in-out;
 }
 
@@ -320,9 +316,9 @@ section.page {
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #2C4251;
+    border: solid 2px white;
     font-size: 20px;
-    color: #2C4251;
+    color: white;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -332,13 +328,13 @@ section.page {
 .btn-outline:active,
 .btn-outline.active {
     /* border: solid 2px #fff; */
-    color: #{{ site.color.primary }};
+    color: {{ site.color.primary }};
     background: #fff;
 }
 
 .btn-success {
     margin-top: 15px;
-    border: solid 2px #{{ site.color.secondary }};
+    border: solid 2px {{ site.color.secondary }};
     font-size: 20px;
     color: #{{ site.color.secondary }};
     background: 0 0;
@@ -349,8 +345,8 @@ section.page {
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active {
-    border: solid 2px #{{ site.color.primary }};
-    color: #{{ site.color.primary }};
+    border: solid 2px {{ site.color.primary }};
+    color: {{ site.color.primary }};
     background: #fff;
 }
 
@@ -403,7 +399,7 @@ section.page {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #{{ site.color.primary }};
+    color: {{ site.color.primary }};
 }
 
 form .row:first-child .floating-label-form-group {
@@ -430,15 +426,15 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    color: #{{ site.color.secondary }};
+    color: {{ site.color.secondary }};
 }
 
 .btn-social {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #{{ site.color.secondary-dark }};
-    color: #{{ site.color.secondary-dark }};
+    border: 2px solid {{ site.color.secondary }};
+    color: {{ site.color.secondary }};
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
@@ -532,7 +528,7 @@ footer .footer-below {
 }
 
 .modal-content {
-    background-color: #{{ site.color.primary }} !important;
+    background-color: {{ site.color.primary }} !important;
     color: white;
 }
 
@@ -543,7 +539,7 @@ footer .footer-below {
 
 .navbar-nav>.active>a {
     color: #fff !important;
-    background-color: #{{ site.color.secondary }} !important;
+    background-color: {{ site.color.secondary }} !important;
 }
 
 /* Fix modal mouse wheel issues */
@@ -616,7 +612,7 @@ footer .footer-below {
     }
 }
 
-@media(min-width:{{ site.style.flex-transition }}) {
+@media(hover: hover) {
     .firstFade {
         -webkit-animation-name: reset, fade-in;
         -webkit-animation-duration: 1s;
