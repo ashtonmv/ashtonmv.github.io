@@ -35,7 +35,7 @@
             mouseenter: function () {
                 var index = this.id.split("-")[0];
                 var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
-                delay(30).then(() => typewrite("#typewrite", fullTxt));
+                delay(100).then(() => typewrite("#typewrite", fullTxt));
             },
             mouseleave: function () {
                 var index = this.id.split("-")[0];
