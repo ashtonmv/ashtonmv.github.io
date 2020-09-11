@@ -65,13 +65,13 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 		border: 2px solid white;
 	}
 
-	.nav-break {
+	.page-nav .nav-break {
 		flex-basis: 100%;
 		height: 0;
 	}
 	 
 	@media(min-width:{{ site.style.flex-transition }}) {
-		.nav-break {
+		.page-nav .nav-break {
 			flex-basis: 0%;
 			height: 0;
 		}
