@@ -83,18 +83,29 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	
 	.nav-icon {
 		text-decoration: none !important;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 50px;
-		height: 30px;
-		width: 30px;
-		margin: 10px auto;
+		height: 25px;
+		width: 25px;
+		margin: 5px auto;
 		padding: 13px 10px 6px 10px !important;
 		border: 2px solid white;
-		border-radius: 20px;
+		border-radius: 18px;
 		color: white;
 		transition: 0.2s ease-in-out;
 	}
-	
+
+	@media(min-width: 500px) {
+		.nav-icon {
+			font-size: 20px;
+			height: 30px;
+			width: 30px;
+			border-radius: 20px;
+			margin: 10px auto;
+			padding: 13px 10px 6px 10px !important;
+		}
+	}
+
 	.nav-icon:hover {
 		text-decoration: None !important;
 		background: rgba(255, 255, 255, 0.2);

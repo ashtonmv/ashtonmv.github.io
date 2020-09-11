@@ -148,16 +148,27 @@ h6 {
 
 .nav-icon {
     text-decoration: none !important;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 50px;
-    height: 50px;
-    width: 50px;
-    margin: 10px auto;
-    padding: 13px 10px 6px 10px !important;
+    height: 40px;
+    width: 40px;
+    margin: 5px auto;
+    padding: 8px 10px 6px 10px !important;
     border: 2px solid white;
-    border-radius: 20px;
+    border-radius: 15px;
     color: white;
     transition: 0.2s ease-in-out;
+}
+
+@media(min-width: 500px) {
+    .nav-icon {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        border-radius: 20px;
+        margin: 10px auto;
+        padding: 13px 10px 6px 10px !important;
+    }
 }
 
 .nav-icon:hover {
