@@ -87,18 +87,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 		line-height: 50px;
 		height: 30px;
 		width: 30px;
-		margin: 5px auto;
+		margin: 10px auto;
 		padding: 13px 10px 6px 10px !important;
 		border: 2px solid white;
 		border-radius: 20px;
 		color: white;
 		transition: 0.2s ease-in-out;
-	}
-
-	@media(min-width: 500px) {
-		.nav-icon {
-			margin: 10px auto;
-		}
 	}
 
 	.nav-icon:hover {
