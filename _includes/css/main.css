@@ -10,6 +10,7 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background: rgb(75,180,255,1);
 }
 
 p {
