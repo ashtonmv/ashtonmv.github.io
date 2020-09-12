@@ -137,6 +137,11 @@ h6 {
     .header .container {
         padding-top: 100px;
     }
+
+    .typewrite {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
 }
 
 .clear {
@@ -209,7 +214,6 @@ h6 {
     font-size: 2em;
     color: white;
     margin-top: 50px;
-    /* padding-top: 100px; */
     position: relative;
     background: none;
     font-family: "Lobster Two";
