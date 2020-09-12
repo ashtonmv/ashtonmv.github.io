@@ -92,22 +92,22 @@ awards:
   - 
     title: MaterialsWeb / MPInterfaces (2D Materials database)
     bullets:
-      - Designed and developed the <a href="https://materialsweb.org">Materialsweb online database</a>
-      - Core developer for <a href="https://github.com/henniggroup/mpinterfaces">MPInterfaces</a> (the python backend for generating and analyzing materials data)
+      - Designed and developed the <a href="https://materialsweb.org" target="_blank">Materialsweb online database</a>
+      - Core developer for <a href="https://github.com/henniggroup/mpinterfaces" target="_blank">MPInterfaces</a> (the python backend for generating and analyzing materials data)
   -
     title: pyrho (real-space DFT package in python)
     bullets:
-      - Creator and lead <a href="https://github.com/ashtonmv/pyrho">codebase</a> developer
+      - Creator and lead <a href="https://github.com/ashtonmv/pyrho" target="_blank">codebase</a> developer
       - Used code to introduce several masters/PhD students to DFT fundamentals
   -
     title: pyiron (python framework for materials simulation)
     bullets:
-      - Developer, designed input class for simulations & calculations used throughout <a href="https://github.com/pyiron/pyiron">codebase</a>
-      - <a href="https://pyiron.org">Website</a> creator and maintainer
+      - Developer, designed input class for simulations & calculations used throughout <a href="https://github.com/pyiron/pyiron" target="_blank">codebase</a>
+      - <a href="https://pyiron.org" target="_blank">Website</a> creator and maintainer
   -
     title: SPHInX (C++ DFT package)
     bullets:
-      - Developed van der Waals and Hirschfeld charge partitioning extensions to the <a hreff="https://sxrepo.mpie.de">code</a>
+      - Developed van der Waals and Hirschfeld charge partitioning extensions to the <a href="https://sxrepo.mpie.de" target="_blank">code</a>
 
 
 references:

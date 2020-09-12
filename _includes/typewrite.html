@@ -5,17 +5,34 @@
 </h1>
 
 <script>
+
+    function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     if (!window.matchMedia( "(hover: none)" ).matches) {
         $(".nav-icon").on({
             mouseenter: function () {
-                var Typer = new TxtType($("#typewrite"), $("#wrap").html(), $(this).attr("data-typewrite"));
-                Typer.type();
+                new TxtType($("#typewrite"), $("#wrap").html(), $(this).attr("data-typewrite")).type();
             },
             mouseleave: function () {
-                var StartTxt = $("#wrap").html();
-                var Typer = new TxtType($("#typewrite"), $("#wrap").html(), "");
-                Typer.wipe();
+                new TxtType($("#typewrite"), $("#wrap").html(), "").wipe();
             }
+        });
+    } else {
+        $( document ).ready(function() {
+            var t = 500;
+            var nLoops = 0;
+            while (nLoops < 5) {
+                $('.nav-icon').each(function(i, obj) {
+                    delay(t).then(() => $(obj).addClass("active"));
+                    delay(t+500).then(() => new TxtType($("#typewrite"), "", $(obj).attr("data-typewrite")).type());
+                    delay(t+2500).then(() => new TxtType($("#typewrite"), $("#wrap").html(), "").wipe());
+                    delay(t+2500).then(() => $(obj).removeClass("active"));
+                    t += 2500;
+                });
+            nLoops += 1;
+            };
         });
     }
 

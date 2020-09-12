@@ -3,10 +3,11 @@ title: Michael Ashton
 email: ashton@mpie.de
 url: michael-ashton.com
 baseurl: ""
-description: "Science + Software + Some other stuff"
+description: Science + Software + Some other stuff
+welcome_message: Welcome to my website!
 phone: +49 176 329 81187
 address: Corintostrasse 2</br>Cologne, Germany 51103
-keywords: "Science, Software, Materials, Programmer, Coding, Development, Resume, CV, Physics, Research"
+keywords: Science, Software, Materials, Programmer, Coding, Development, Resume, CV, Physics, Research
 meta_author: Ashton Michael
 
 # Contact form:
@@ -46,7 +47,7 @@ nav-icons:
     url: /projects
     typewrite: Projects
     new_page: false
-  - name: resume
+  - name: cv
     icon: fas fa-file-contract
     url: /cv
     typewrite: Curriculum Vitae
