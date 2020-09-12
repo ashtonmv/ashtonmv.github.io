@@ -49,6 +49,20 @@ h6 {
     margin: 0 auto;
 }
 
+.img-featured {
+    height: auto;
+}
+
+.page-container .img-featured {
+    max-width: 200px;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+
+.modal-body .img-featured {
+    max-width: 400px;
+}
+
 .pg-canvas {
     position: absolute;
     background: {{ site.color.primary }};
@@ -531,11 +545,6 @@ footer .footer-below {
     color: white;
 }
 
-.modal-body img {
-    height: auto;
-    max-width: 200px;
-}
-
 .navbar-nav>.active>a {
     color: #fff !important;
     background-color: {{ site.color.secondary }} !important;
@@ -612,87 +621,101 @@ footer .footer-below {
 }
 
 @media(hover: hover) {
-    .firstFade {
-        -webkit-animation-name: reset, fade-in;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-timing-function: ease-in;
-        
-        -moz-animation-name: reset, fade-in;
-        -moz-animation-duration: 1s;
-        -moz-animation-timing-function: ease-in;
-        
-        animation-name: reset, fade-in;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-    }
-
-    .secondFade {
-        -webkit-animation-name: reset, fade-in;
-        -webkit-animation-duration: 1.2s;
-        -webkit-animation-timing-function: ease-in;
-        
-        -moz-animation-name: reset, fade-in;
-        -moz-animation-duration: 1.2s;
-        -moz-animation-timing-function: ease-in;
-        
-        animation-name: reset, fade-in;
-        animation-duration: 1.2s;
-        animation-timing-function: ease-in;
-    }
-
-    .thirdFade {
-        -webkit-animation-name: reset, fade-in;
-        -webkit-animation-duration: 1.4s;
-        -webkit-animation-timing-function: ease-in;
-        
-        -moz-animation-name: reset, fade-in;
-        -moz-animation-duration: 1.4s;
-        -moz-animation-timing-function: ease-in;
-        
-        animation-name: reset, fade-in;
-        animation-duration: 1.4s;
-        animation-timing-function: ease-in;
-    }
-    
-    .fourthFade {
-        -webkit-animation-name: reset, fade-in;
-        -webkit-animation-duration: 1.6s;
-        -webkit-animation-timing-function: ease-in;
-        
-        -moz-animation-name: reset, fade-in;
-        -moz-animation-duration: 1.6s;
-        -moz-animation-timing-function: ease-in;
-        
-        animation-name: reset, fade-in;
-        animation-duration: 1.6s;
-        animation-timing-function: ease-in;
-    }
-
-    .fifthFade {
-        -webkit-animation-name: reset, fade-in;
-        -webkit-animation-duration: 1.8s;
-        -webkit-animation-timing-function: ease-in;
-        
-        -moz-animation-name: reset, fade-in;
-        -moz-animation-duration: 1.8s;
-        -moz-animation-timing-function: ease-in;
-        
-        animation-name: reset, fade-in;
-        animation-duration: 1.8s;
-        animation-timing-function: ease-in;
-    }
-
-    .sixthFade {
-        -webkit-animation-name: reset, fade-in;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-timing-function: ease-in;
-        
-        -moz-animation-name: reset, fade-in;
-        -moz-animation-duration: 2s;
-        -moz-animation-timing-function: ease-in;
-        
-        animation-name: reset, fade-in;
-        animation-duration: 2s;
-        animation-timing-function: ease-in;
-    }
+	.fade-0 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 0.5s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 0.5s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 0.5s;
+		animation-timing-function: ease-in;
+	}
+	 
+	.fade-1 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 1s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 1s;
+		animation-timing-function: ease-in;
+	}
+	
+	.fade-2 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 1.2s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 1.2s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 1.2s;
+		animation-timing-function: ease-in;
+	}
+	
+	.fade-3 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 1.4s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 1.4s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 1.4s;
+		animation-timing-function: ease-in;
+	}
+	 
+	.fade-4 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 1.6s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 1.6s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 1.6s;
+		animation-timing-function: ease-in;
+	}
+	
+	.fade-5 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 1.8s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 1.8s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 1.8s;
+		animation-timing-function: ease-in;
+	}
+	
+	.fade-6 {
+		-webkit-animation-name: reset, fade-in;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-timing-function: ease-in;
+		
+		-moz-animation-name: reset, fade-in;
+		-moz-animation-duration: 2s;
+		-moz-animation-timing-function: ease-in;
+		
+		animation-name: reset, fade-in;
+		animation-duration: 2s;
+		animation-timing-function: ease-in;
+	}
 }

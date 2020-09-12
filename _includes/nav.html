@@ -1,100 +1,20 @@
-{% if pagename == "0-home" %}
-    {% assign nav-delay=0 %}
-{% else %}
-    {% assign nav-delay=0 %}
-{% endif %}
-<div id="nav" class="nav-row {% if pagename == '0-home' or pagename == '404' %}quickFade{% else %}page-nav{% endif %}">
-    <div id="0-home" class="nav-icon firstFade fas fa-home" onclick="location.href='/';"></div>
-    <div id="1-about" class="nav-icon secondFade fas fa-address-card" onclick="location.href='{{ site.baseurl }}/about';"></div>
-    <div id="2-projects" class="nav-icon thirdFade  fas fa-tools" onclick="location.href='{{ site.baseurl }}/projects';"></div>
-    <div class="nav-break"></div>
-    <div id="3-resume" class="nav-icon fourthFade delayFour fas fa-file-contract" onclick="location.href='{{ site.baseurl }}/cv';"></div>
-    <div id="4-github" class="nav-icon fifthFade delayFive fab fa-github-alt" onclick="window.open('https://github.com/ashtonmv', '_blank');"></div>
-    <div id="5-publications" class="nav-icon sixthFade fas fa-feather" onclick="window.open('https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en', '_blank');"></div>
+<div id="nav" class="nav-row {% if page.url != '/' %}page-nav{% endif %}">
+    {% assign i = 1 %}
+    {% for nav-icon in site.nav-icons %}
+        {% if nav-icon.url == "/" %}
+            {% if page.url != "/" %}
+                <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon fade-{{ i }} {{ nav-icon.icon }}"
+                     {% if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url }}');"
+                     {% else %} onclick="location.href='{{ nav-icon.url }}';"
+                     {% endif %}></div>
+                {% assign i = i | plus:1 %}
+            {% endif %}
+        {% else %}
+            <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon {% if ! {{ page.url }} contains '404' %} page-nav {% endif %} fade-{{ i }} {{ nav-icon.icon }}"
+            {% if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url }}');"
+            {% else %} onclick="location.href='{{ nav-icon.url }}';"
+            {% endif %}></div>
+            {% assign i = i | plus:1 %}
+        {% endif %}
+    {% endfor %}
 </div>
-
-<script>
-    if ("{{ pagename }}" == "0-home") {
-        $(".nav-icon#{{ pagename }}").hide();
-    } else if ("{{ pagename }}" != "404") {
-        $(".nav-icon#{{ pagename }}").css('background-color', 'rgba(255, 255, 255, 0.6)');
-        $(".nav-icon#{{ pagename }}").css('color', '#{{ site.color.primary }}');
-    }
-</script>
-
-{% if pagename == "0-home" %}
-
-    <h1 class="typewrite">
-        <a id="typewrite" href="" class="typewrite" 
-        data-type='[ "Home", "About Me", "Projects", "Curriculum Vitae", "Github", "Publications" ]'>
-        <span class="wrap" id="wrap"></span>
-        </a>
-    </h1>
-
-    <script>
-        if (!window.matchMedia( "(hover: none)" ).matches) {
-            $(".nav-icon").on({
-                mouseenter: function () {
-                    var index = this.id.split("-")[0];
-                    var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
-                    typewrite("#typewrite", fullTxt);
-                },
-                mouseleave: function () {
-                    var index = this.id.split("-")[0];
-                    var txt = JSON.parse($("#typewrite").attr("data-type"))[index];
-                    var Typer = new TxtType($("#typewrite"), "", txt);
-                    Typer.wipe();
-                }
-            });
-        }
-
-        // $(".nav-icon").click(function() {
-        //     var index = this.id.split("-")[0];
-        //     var fullTxt = JSON.parse($("#typewrite").attr("data-type"))[index];
-        //     typewrite("#typewrite", fullTxt);
-        // });
-
-        var TxtType = function(el, fullTxt, startTxt) {
-            this.el = el;
-            this.txt = startTxt;
-            this.fullTxt = fullTxt;
-        };
-
-        TxtType.prototype.type = function() {
-            if (this.txt.length < this.fullTxt.length) {
-                this.txt = this.fullTxt.substring(0, this.txt.length + 1);
-                this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
-            } else {
-                return;
-            };
-            var that = this;
-            setTimeout(function() {
-                that.type();
-            }, 50);
-        };
-
-        TxtType.prototype.wipe = function() {
-            if (this.txt.length) {
-                this.txt = this.txt.substring(0, this.txt.length - 1);
-                this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
-            } else {
-                this.el.html('<span class="wrap" id="wrap">'+this.txt+'</span>');
-                return;
-            };
-            var that = this;
-            setTimeout(function() {
-                that.wipe();
-            }, 20);        
-        };
-
-        function typewrite(typewriterID, fullTxt) {
-            var typewriter = $(typewriterID);
-            var fullTxt = fullTxt;
-            var period = typewriter.attr('data-period');
-            if (fullTxt) {
-                var Typer = new TxtType(typewriter, fullTxt, '');
-                Typer.type();
-            }
-        };
-    </script>
-{% endif %}

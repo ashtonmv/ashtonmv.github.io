@@ -9,16 +9,7 @@ address: Corintostrasse 2</br>Cologne, Germany 51103
 keywords: "Science, Software, Materials, Programmer, Coding, Development, Resume, CV, Physics, Research"
 meta_author: Ashton Michael
 
-# Google webmaster tools
-google_verify:
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
 # Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
 contact: formbutton
 
 # If you use disqus you need disqus shortname
@@ -29,7 +20,7 @@ style:
   padding-transition: 600px
   flex-transition: 500px
 
-# Color settings (hex-codes without the leading hash-tag)
+# Color settings
 color:
   primary: rgba(255, 59, 45, 1) #ff3b2d
   secondary: rgba(255, 95, 67) #ff4c1f
@@ -37,20 +28,39 @@ color:
   particles: rgba(255,255,255,0.5)
   particle-lines: rgba(255,255,255,0.5)
 
-# Footer settings
-footer:
-  copyright: Michael Ashton
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: google
-    url: http://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en
-  - title: github
-    url: http://github.com/ashtonmv
-  - title: linkedin
-    url: http://www.linkedin.com/in/michael-ashton/
-  - title: researchgate
-    url: https://www.researchgate.net/profile/Michael_Ashton6
+nav-icons:
+  - name: home
+    icon: fas fa-home
+    url: /
+    typewrite: Home
+    new_page: false
+  - name: about
+    icon: fas fa-address-card
+    url: /about
+    typewrite: About Me
+    new_page: false
+  - name: projects
+    icon: fas fa-tools
+    url: /projects
+    typewrite: Projects
+    new_page: false
+  - name: resume
+    icon: fas fa-file-contract
+    url: /cv
+    typewrite: Curriculum Vitae
+    new_page: false
+  - name: github
+    icon: fab fa-github-alt
+    url: https://github.com/ashtonmv
+    typewrite: Github
+    new_page: true
+  - name: publications
+    icon: fas fa-feather
+    url: https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en
+    typewrite: Google Scholar
+    new_page: true
 
 # Build settings
 markdown: kramdown
