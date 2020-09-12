@@ -10,8 +10,8 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    overflow-y: scroll;
-    background: none;
+    background: {{ site.color.primary }};
+    background: linear-gradient(0deg, {{ site.color.primary }} 0%, {{ site.color.secondary }} 100%);
 }
 
 p {
@@ -526,10 +526,6 @@ section.page {
 }
 
 /* cv-specifics */
-
-.cv-body {
-    background: linear-gradient(0deg, {{ site.color.primary }} 0%, {{ site.color.secondary }} 100%);
-}
 
 #resume {
     width: 90%;
