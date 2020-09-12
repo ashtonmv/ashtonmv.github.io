@@ -18,8 +18,8 @@ contact: formbutton
 # disqus_shortname: myshortname
 
 style:
-  padding-transition: 600px
-  flex-transition: 500px
+  height-transition: 700px
+  fwidth-transition: 500px
 
 # Color settings
 color:

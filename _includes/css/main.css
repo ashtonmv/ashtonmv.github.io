@@ -133,14 +133,14 @@ h6 {
     font-size: 1.75em;
 }
 
-@media(min-width:{{ site.style.padding-transition }}) {
+@media(min-height:{{ site.style.height-transition }}) {
     .header .container {
-        padding-top: 100px;
+        padding-top: 200px;
     }
 
     .typewrite {
-        font-size: 2em;
-        margin-top: 50px;
+        font-size: 2em !important;
+        margin-top: 100px !important;
     }
 }
 
@@ -172,7 +172,7 @@ h6 {
    height: 0;
 }
 
-@media(min-width:{{ site.style.flex-transition }}) {
+@media(min-width:{{ site.style.width-transition }}) {
     .page-nav .nav-break {
         flex-basis: 0%;
         height: 0;
