@@ -139,9 +139,8 @@ h6 {
     }
 
     .typewrite {
-        color: black;
-        font-size: 1.5em;
-        margin-top: 20px;
+        font-size: 2em;
+        margin-top: 50px;
     }
 }
 
@@ -212,9 +211,9 @@ h6 {
 }
 
 .typewrite {
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-top: 20px;
     color: white;
-    margin-top: 50px;
     position: relative;
     background: none;
     font-family: "Lobster Two";
