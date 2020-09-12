@@ -3,14 +3,13 @@
 	<div class="mainDetails cv-section">
 		{% include nav.html %}
 
-		<div id="headshot" class="quickFade">
+		<div id="headshot" class="fade-0">
 			<img src="{{ site.baseurl }}/img/cv_headshot.png" alt="{{ site.title }}" />
 		</div>
 		
 		<div id="name">
 			<h1 class="fade-1">{{ site.data.cv.name }}</h1>
 			<h2 class="fade-2">{{ site.data.cv.role }}</h2>
-			<a class="fade-3" href="/static/CV-Michael-Ashton.pdf" download><i class="fa fa-download"></i></a>
 		</div>
 		
 		<div id="contactDetails" class="fade-4">
@@ -135,6 +134,11 @@
 			</div>
 			<div class="clear"></div>
 		</section>
+		<div style="display: flex; justify-content: center;">
+			<a class="fade-3" href="{{ site.baseurl }}/static/CV-Michael-Ashton.pdf" download>
+				<div class="cv-section btn-outline"><i class="fa fa-download"></i></div>
+			</a>
+		</div>
 	</div>
 	</div>
 	</div>

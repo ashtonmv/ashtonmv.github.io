@@ -19,7 +19,7 @@ contact: formbutton
 
 style:
   height-transition: 700px
-  fwidth-transition: 500px
+  width-transition: 500px
 
 # Color settings
 color:
