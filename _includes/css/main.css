@@ -888,12 +888,6 @@ footer .footer-below {
 
 @media all and (max-width: 480px) {
     
-    .keySkills {
-        -moz-column-count:1;
-        -webkit-column-count:1;
-        column-count:1;
-    }
-    
     #name h1 {
         line-height: .8em;
         margin-bottom: 4px;
