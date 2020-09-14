@@ -4,8 +4,9 @@
         {% for nav-icon in site.nav-icons %} {% unless nav-icon.url == "/" %}
 
             <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon fade-{{ i }} {{ nav-icon.icon }}"
-            {% if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url }}');"
-            {% else %} onclick="location.href='{{ nav-icon.url }}';"
+            {% if nav-icon.url contains 'https' %} onclick="window.open('{{ nav-icon.url }}');"
+            {% else if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url | relative_url }}');"
+            {% else %} onclick="location.href='{{ nav-icon.url | relative_url }}';"
             {% endif %}></div>
 
             {% assign i = i | plus:1 %}
@@ -13,14 +14,21 @@
     {% else %}
         {% assign i = 1 %}
         {% for nav-icon in site.nav-icons %}
-            <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon {{ nav-icon.icon }} {% if page.url contains nav-icon.name %}active{% endif %}"
-            {% if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url }}');"
-            {% else %} onclick="location.href='{{ nav-icon.url }}';"
+            <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}"
+            class="nav-icon {{ nav-icon.icon }}
+            {% if page.url contains nav-icon.url | relative_url and nav-icon.url != '' %}active{% endif %}"
+            {% if nav-icon.url contains 'https' %} onclick="window.open('{{ nav-icon.url }}');"
+            {% else if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url | relative_url }}');"
+            {% else %} onclick="location.href='{{ nav-icon.url | relative_url }}';"
             {% endif %}></div>
-            {% if i == 3 %}
+
+            <!-- insert a line break after every 3rd icon that will trigger
+            (based on site.width_transition) for mobile/narrow screens. -->
+            {% if i % 3 == 0 %}
                 <div class="nav-break"></div>
             {% endif %}
-            {% assign i = i | plus:1 %}
+
+            {% assign i = i | plus: 1 %}
         {% endfor %}
     {% endif %}
 </div>

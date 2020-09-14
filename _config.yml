@@ -2,11 +2,10 @@
 title: Michael Ashton
 email: ashton@mpie.de
 url: michael-ashton.com
-baseurl: ""
+baseurl: /
 description: Science + Software + Some other stuff
-welcome_message: Welcome to my website!
 phone: +49 176 329 81187
-address: Corintostrasse 2</br>Cologne, Germany 51103
+address: Corintostrasse 2</br>Cologne, Germany 51103  # Don't forget the 
 keywords: Science, Software, Materials, Programmer, Coding, Development, Resume, CV, Physics, Research
 meta_author: Ashton Michael
 
@@ -30,26 +29,27 @@ color:
   particle-lines: rgba(255,255,255,0.5)
 
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Nav Icons used throughout the website.
+# name: 
 nav-icons:
   - name: home
     icon: fas fa-home
-    url: /
+    url: ""
     typewrite: Home
     new_page: false
   - name: about
     icon: fas fa-address-card
-    url: /about
+    url: about
     typewrite: About Me
     new_page: false
   - name: projects
     icon: fas fa-tools
-    url: /projects
+    url: projects
     typewrite: Projects
     new_page: false
   - name: cv
     icon: fas fa-file-contract
-    url: /cv
+    url: cv
     typewrite: Curriculum Vitae
     new_page: false
   - name: github
@@ -67,9 +67,9 @@ nav-icons:
 markdown: kramdown
 permalink: pretty
 
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      permalink: ""
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       permalink: ""
