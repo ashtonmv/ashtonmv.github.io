@@ -5,7 +5,6 @@
 
             <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon fade-{{ i }} {{ nav-icon.icon }}"
             {% if nav-icon.url contains 'https' %} onclick="window.open('{{ nav-icon.url }}');"
-            {% else if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url | relative_url }}');"
             {% else %} onclick="location.href='{{ nav-icon.url | relative_url }}';"
             {% endif %}></div>
 
@@ -18,7 +17,6 @@
             class="nav-icon {{ nav-icon.icon }}
             {% if page.url contains nav-icon.url | relative_url and nav-icon.url != '/' %}active{% endif %}"
             {% if nav-icon.url contains 'https' %} onclick="window.open('{{ nav-icon.url }}');"
-            {% else if nav-icon.new_page %} onclick="window.open('{{ nav-icon.url | relative_url }}');"
             {% else %} onclick="location.href='{{ nav-icon.url | relative_url }}';"
             {% endif %}></div>
 
