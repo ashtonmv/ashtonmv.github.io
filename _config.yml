@@ -36,32 +36,26 @@ nav-icons:
     icon: fas fa-home
     url: /
     typewrite: Home
-    new_page: false
   - name: about
     icon: fas fa-address-card
     url: about
     typewrite: About Me
-    new_page: false
   - name: projects
     icon: fas fa-tools
     url: projects
     typewrite: Projects
-    new_page: false
   - name: cv
     icon: fas fa-file-contract
     url: cv
     typewrite: Curriculum Vitae
-    new_page: false
   - name: github
     icon: fab fa-github-alt
     url: https://github.com/ashtonmv
     typewrite: Github
-    new_page: true
   - name: publications
     icon: fas fa-feather
     url: https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en
     typewrite: Google Scholar
-    new_page: true
 
 # Build settings
 markdown: kramdown

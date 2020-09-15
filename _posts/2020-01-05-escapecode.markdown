@@ -3,7 +3,7 @@ title: EscapeCode
 layout: home
 modal-id: 5
 date: 2020-01-05
-img: escapecode.png
+img: img/portfolio/escapecode.png
 alt: image-alt
 category: Web Development
 action: <a href="http://www.escape-code.com/">Visit the site</a>

@@ -3,7 +3,7 @@ title: Pyrho
 layout: home
 modal-id: 3
 date: 2020-01-03
-img: pyrho.png
+img: img/portfolio/pyrho.png
 alt: image-alt
 category: Software Development
 action: <a href="https://github.com/ashtonmv/pyrho">Check out the project</a>

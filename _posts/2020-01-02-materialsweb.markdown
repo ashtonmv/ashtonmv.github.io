@@ -3,7 +3,7 @@ title: MaterialsWeb
 layout: home
 modal-id: 2
 date: 2020-01-02
-img: materialsweb.png
+img: img/portfolio/materialsweb.png
 alt: image-alt
 category: Web Development
 action: <a href="https://materialsweb.org">Visit the site</a>
