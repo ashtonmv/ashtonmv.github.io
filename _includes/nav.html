@@ -22,10 +22,10 @@
 
             <!-- insert a line break after every 3rd icon that will trigger
             (based on site.width_transition) for mobile/narrow screens. -->
-            {% if i % 3 == 0 %}
+            {% if i == 3 %}
                 <div class="nav-break"></div>
+                {% assign i = 0 %}
             {% endif %}
-
             {% assign i = i | plus: 1 %}
         {% endfor %}
     {% endif %}
