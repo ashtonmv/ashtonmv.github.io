@@ -34,7 +34,7 @@ color:
 nav-icons:
   - name: home
     icon: fas fa-home
-    url: ""
+    url: /
     typewrite: Home
     new_page: false
   - name: about
