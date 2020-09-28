@@ -39,6 +39,9 @@
                             <hr>
                             <img src="{{ post.img | relative_url }}" class="img-featured img-centered" alt="{{ post.title }}">
                             <p>{{ post.description }}</p>
+                            {% if post.action %}
+                                <p>{{ post.action }}</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
