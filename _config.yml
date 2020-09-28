@@ -12,10 +12,3 @@ meta_author: Ashton Michael
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-# defaults:
-#   - scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       permalink: ""
