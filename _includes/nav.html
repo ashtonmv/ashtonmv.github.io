@@ -1,10 +1,10 @@
-<div id="nav" class="nav-row {% unless page.layout == 'home' or page.layout == 'fourzerofour' %}page-nav{% endunless %}">
-    {% if page.layout == "home" %}
+<div id="nav" class="nav-row {% unless page.url == '/' or page.url contains '404' %}page-nav{% endunless %}">
+    {% if page.url == "/" %}
         {% assign i = 1 %}
-        {% for nav-icon in site.nav-icons %} {% unless nav-icon.url == "/" %}
+        {% for nav-icon in site.data.nav-icons %} {% unless nav-icon.url == "/" %}
 
-            <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon fade-{{ i }} {{ nav-icon.icon }}"
-            {% if nav-icon.url contains 'http' %} onclick="window.open('{{ nav-icon.url }}');"
+            <div id="{{ nav-icon.id }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon fade-{{ i }} {{ nav-icon.icon }}"
+            {% if nav-icon.url contains 'https' %} onclick="window.open('{{ nav-icon.url }}');"
             {% else %} onclick="location.href='{{ nav-icon.url | relative_url }}';"
             {% endif %}></div>
 
@@ -12,21 +12,16 @@
         {% endunless %}{% endfor %}
     {% else %}
         {% assign i = 1 %}
-        {% for nav-icon in site.nav-icons %}
-            <div id="{{ nav-icon.name }}" data-typewrite="{{ nav-icon.typewrite }}"
-            class="nav-icon {{ nav-icon.icon }}
-            {% if page.url contains nav-icon.url | relative_url and nav-icon.url != '/' %}active{% endif %}"
-            {% if nav-icon.url contains 'http' %} onclick="window.open('{{ nav-icon.url }}');"
+        {% for nav-icon in site.data.nav-icons %}
+            <div id="{{ nav-icon.id }}" data-typewrite="{{ nav-icon.typewrite }}" class="nav-icon {{ nav-icon.icon }} {% if page.url contains nav-icon.url and nav-icon.url != '/' %}active{% endif %}"
+            {% if nav-icon.url contains 'https' %} onclick="window.open('{{ nav-icon.url }}');"
             {% else %} onclick="location.href='{{ nav-icon.url | relative_url }}';"
             {% endif %}></div>
-
-            <!-- insert a line break after every 3rd icon that will trigger
-            (based on site.width_transition) for mobile/narrow screens. -->
             {% if i == 3 %}
                 <div class="nav-break"></div>
                 {% assign i = 0 %}
             {% endif %}
-            {% assign i = i | plus: 1 %}
+            {% assign i = i | plus:1 %}
         {% endfor %}
     {% endif %}
 </div>

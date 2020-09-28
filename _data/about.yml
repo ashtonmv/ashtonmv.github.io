@@ -1,0 +1,9 @@
+title: About Me
+image: img/headshot_1.png
+rows:
+  -
+    - "I'm a (postdoc) materials scientist currently working at the Max Planck Institute for Iron Research in Düsseldorf, Germany."
+    - "If you've wandered around this website for a while, you know that I also have other interests, like web development and drawing."
+  -
+    - "I'm always working on a number of projects, and I use this page to keep track of them. If you have questions about any of them, just <a style='cursor: pointer' onclick='$('.formbutton').click();''>let me know!</a>"
+    - "By the way, the research icon on my projects page comes from <a href='https://www.flaticon.com/authors/freepik' title='Freepik'>Freepik</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a>, a site I really love."
