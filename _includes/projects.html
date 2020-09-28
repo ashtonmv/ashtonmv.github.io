@@ -1,5 +1,5 @@
-<!-- project Grid Section -->
-<section id="project" class="page particles">
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="page particles">
     <div class="page-container">
         {% include nav.html %}
         <div class="row">
@@ -7,13 +7,14 @@
                 <h2>Projects</h2>
             </div>
         </div>
-        <div class="project-row">
+        <div class="portfolio-row">
             {% assign i = 1 %}
-            {% for post in site.posts %}
-                <div class="project-item fade-{{ i }}">
+            {% for post in site.posts reversed %}
+                <div class="portfolio-item fade-{{ i }}">
                     {% assign i = i | plus: 1 %}
-                    <a href="#projectModal-{{ post.modal-id }}" class="project-link" data-toggle="modal">
-                        <img src="{{ post.img | relative_url }}" class="img-responsive fade-{{ i }}" alt="{{ post.title }}">
+                    <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                        <img src="{{ post.img | relative_url }}" class="img-responsive alt="{{ post.alt }}">
+                        <h2>{{ post.title }}</h2>
                     </a>
                 </div>
             {% endfor %}
@@ -21,9 +22,9 @@
     </div>
 </section>
 
- <!-- project Modals -->
+ <!-- Portfolio Modals -->
  {% for post in site.posts %}
-    <div class="project-modal modal fade-0" id="projectModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade-0" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -37,8 +38,11 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr>
-                            <img src="{{ post.img | relative_url }}" class="img-featured img-centered" alt="{{ post.title }}">
-                            <p>{{ post.description }}</p>
+                            <img src="{{ post.img | relative_url }}" class="img-featured img-centered" alt="{{ post.alt }}">
+                            {{ post.content }}
+                            {% if post.action %}
+                                <p>{{ post.action }}</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
