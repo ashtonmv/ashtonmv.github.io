@@ -56,17 +56,17 @@
 		
 		<section class="resume-section">
 			<div class="sectionTitle">
-				<h1>Education</h1>
+				<h1>Education and Research</h1>
 				<hr>
 			</div>
 			
 			<div class="sectionContent">
 				{% assign i=0 %}
-				{% for degree in site.data.resume.education %}
+				{% for position in site.data.resume.work-history %}
 					{% if i != 0%}<hr>{% endif %}
 					{% assign i = i | plus:1 %}
 					<article>
-						<h2>{{ degree.title }}, {{ degree.institute }}</h2>
+						<h2>{{ position.title }}, {{ position.institute }}</h2>
 						<p class="subDetails">{{ position.dates }}</p>
 						{% for bullet in position.bullets %}
 							<p class="resume-bullet">{% if bullet.title %}{{ bullet.title }}: {% endif %}{{ bullet.info }}</p>
@@ -79,21 +79,19 @@
 		
 		<section class="resume-section">
 			<div class="sectionTitle">
-				<h1>Work History</h1>
+				<h1>Selected Publications</h1>
 				<hr>
 			</div>
 			
 			<div class="sectionContent">
 				{% assign i=0 %}
-				{% for job in site.data.resume.work-history %}
+				{% for paper in site.data.resume.publications %}
 					{% if i != 0%}<hr>{% endif %}
 					{% assign i = i | plus:1 %}
 					<article>
-						<h2>{{ job.title }}</h2>
-						<p class="subDetails">{{ job.employer }}, {{ job.dates }}</p>
-						{% for bullet in job.bullets %}
-							<p class="resume-bullet">{{ bullet }}</p>
-						{% endfor %}
+						<a href="{{ paper.link }}"><h2>{{ paper.title }}</h2></a>
+						<p class="subDetails">{{ paper.authors }}</p>
+						<p class="subDetails">{{ paper.journal }}, {{ paper.year }}</p>
 					</article>
 				{% endfor %}
 			</div>

@@ -5,17 +5,17 @@
 
 # Uncomment and configure your formspree link (don't include https://formspree.io/)
 # to add the formbutton to your site.
-#link: your@email.com
+link: ashton@mpie.de
 title: Contact Me
 theme: classic
 response: "Thanks for your message! I'll get back to you soon."
 error_message: "Oops! Something went wrong. Please be sure you entered a valid email address."
 color:
-  title: "#00b7ff"
+  title: "#ff3b2d"
   title-background: white
   body-background: white
   button: white
-  button-background: "#00b7ff"
+  button-background: "#ff3b2d"
 font:
   # Must be fonts available to your site, e.g. those you import
   # in style.scss.

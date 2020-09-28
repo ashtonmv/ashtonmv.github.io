@@ -28,10 +28,10 @@
 
 - id: github
   icon: fab fa-github-alt
-  url: https://github.com/ashtonmv/particular-theme
+  url: https://github.com/ashtonmv
   typewrite: Github
 
-- id: linkedin
-  icon: fab fa-linkedin-in
-  url: https://www.linkedin.com
-  typewrite: LinkedIn
+- id: publications
+  icon: fas fa-feather
+  url: https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en
+  typewrite: Google Scholar

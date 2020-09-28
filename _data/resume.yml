@@ -1,99 +1,133 @@
-name: Your Name
-role: Your Role
-website: your-website.com
-phone: +0 867 5309
-address: 1 Long Str.</br>Long Island, Long State 00000
+name: Michael Ashton
+role: Materials Scientist
+website: michael-ashton.com
+phone: +49 176 329 81187
+address: Corintostraße 2<br>Köln 51103 Germany
 image: img/headshot_2.png
 download: downloads/resume.pdf
 
-personal-profile: I... need a job.
+name: Michael Ashton
+role: Materials Scientist
+
+personal-profile:
+  "I am a motivated learner who loves engaging with others on a team.
+  I hope to use my experience and passion for software design and
+  computational materials research to make real
+  progress toward designing and discovering useful materials properties."
 
 skills:
-  - HTML(5)
-  - CSS/sass
-  - javascript/JQuery
+  - DFT
   - Python
   - C++
   - Django
   - Git
   - Linux
-  - SQL
+  - MongoDB
+  - javascript
 
-education:
+work-history:
   -
-    title: Doctor of Philosophy in Making Toys
-    institute: University of the North Pole
+    title: Postdoc
+    institute: Max Planck Institut für Eisenforschung
+    dates: November 2017 - Present
+    bullets:
+    -
+      title: null
+      info: As part of the Defect Chemistry and
+        Spectroscopy group, I designed and performed DFT
+        investigations of material responses to extreme
+        electric fields.
+  -
+    title: Doctor of Philosophy in Materials Science
+    institute: University of Florida
     dates: August 2013 - October 2017
     bullets:
     -
       title: GPA
-      info: 4.0/4.0
-    - title: Advisor
-      info: Dr. Nicholas Claus
+      info: 3.95/4
+    - title: Advisors
+      info: Dr. Richard Hennig and Dr. Susan Sinnott
     - title: Thesis
-      info: Computer Modeling and Toy Manufacturing
+      info: Computational Methods for the Discovery and
+        Characterization of Two-Dimensional Materials
   -
-    title: Bachelor of Science in Making Snowballs
-    institute: University of the North Pole
+    title: Bachelor of Science in Materials Science
+    institute: University of Florida
     dates: August 2010 - May 2013
     bullets:
     -
       title: GPA
       info: 3.88/4
     - title: Concentration
-      info: Icy Snowballs
+      info: Metallurgy
 
-work-history:
+publications:
   -
-    title: Delivery Driver
-    employer: Pizza Hut
-    dates: May 2014 - May 2016
-    bullets:
-      - I routinely had to deal with hangry people.
-      - I was the fastest delivery driver, and also never got a speeding ticket.
+    title: Ab Initio Description of Bond-Breaking in Large Electric Fields
+    journal: Phys. Rev. Lett.
+    year: 2020
+    authors: Ashton, M., Mishra, A., Neugebauer, J., and Freysoldt, C.
+    link: https://doi.org/10.1103/PhysRevLett.124.176801
   - 
-    title: Auto Technician
-    employer: Wal Mart
-    dates: June 2009 - January 2010
-    bullets:
-      - I did not set any cars on fire.
-      - Any cars that caught on fire while I was there were probably set on fire by someone else.
+    title: Predicting the Electrochemical Synthesis of 2D Materials from First-Principles
+    journal: J. Phys. Chem. C
+    year: 2019
+    authors: Ashton, M., Mathew, K., Suntevich, J., Freysoldt, C., Sinnott, S. B., and Hennig, R. G.
+    link: https://doi.org/10.1021/acs.jpcc.8b10802
   - 
-    title: Lifeguard
-    employer: VillaSport Athletic Club & Spa
-    dates: May 2008 - August 2008
-    bullets:
-      - I'm going to be honest. I did not like this job.
+    title: Two-Dimensional Half-Metals with Large Spin Gaps
+    journal: Nano Lett.
+    year: 2017
+    authors: Ashton, M., Gluhovic, D., Sinnott, S. B., Guo, J., Stewart, D. A., and Hennig, R. G.
+    link: https://doi.org/10.1021/acs.nanolett.7b01367
+  - 
+    title: Topology-Scaling Identification of Layered Solids and Stable Exfoliated Monolayers
+    journal: Phys. Rev. Lett.
+    year: 2017
+    authors: Ashton, M., Paul, J., Sinnott, S. B, and Hennig, R. G.
+    link: https://doi.org/10.1103/PhysRevLett.118.106101
+  - 
+    title: Behavior of Molecules and Molecular Ions Near a Field Emitter
+    journal: New J. Phys.
+    year: 2016
+    authors: Gault, B., Saxey, D. W., Ashton, M., Sinnott, S. B., Chiaramonti, A. N., Moody, M. P., and Schrieber, D. K.
+    link: https://dx.doi.org/10.1088/1367-2630/18/3/033031
 
 awards:
   - 
-    title: Nobel Peace Prize (2019)
+    title: Alexander von Humboldt award for Postdoctoral Researchers (2019)
     bullets: null
   - 
-    title: Particular Jekyll Theme
+    title: MaterialsWeb / MPInterfaces (2D Materials database)
     bullets:
-      - Designed and developed the <a href="https://github.com/ashtonmv/particular-theme" target="_blank">Particular</a> theme for Jekyll.
-      - This theme is used by lots of people.
+      - Designed and developed the <a href="https://materialsweb.org" target="_blank">Materialsweb online database</a>
+      - Core developer for <a href="https://github.com/henniggroup/mpinterfaces" target="_blank">MPInterfaces</a> (the python backend for generating and analyzing materials data)
   -
-    title: Another Github Project
+    title: pyrho (real-space DFT package in python)
     bullets:
-      - A project I contributed to on Github
-      - A description of how I improved the project
+      - Creator and lead <a href="https://github.com/ashtonmv/pyrho" target="_blank">codebase</a> developer
+      - Used code to introduce several masters/PhD students to DFT fundamentals
   -
-    title: HackerRank
+    title: pyiron (python framework for materials simulation)
     bullets:
-      - An achievement I reached on HackerRank
+      - Developer, designed input class for simulations & calculations used throughout <a href="https://github.com/pyiron/pyiron" target="_blank">codebase</a>
+      - <a href="https://pyiron.org" target="_blank">Website</a> creator and maintainer
+  -
+    title: SPHInX (C++ DFT package)
+    bullets:
+      - Developed van der Waals and Hirschfeld charge partitioning extensions to the <a href="https://sxrepo.mpie.de" target="_blank">code</a>
+
 
 references:
   -
-    name: Nicholas S. Claus
-    position: CEO, toys
-    email: santa@gmail.com
+    name: Dr. Christoph Freysoldt
+    position: Group Leader, Max Planck Institute for Iron Research
+    email: freysoldt@mpie.de
   -
-    name: Jack Frost
-    position: CEO, cold
-    email: jfrost@gmail.com
+    name: Dr. Susan B. Sinnott
+    position: Department Head and Professor of Materials Science, Penn State University
+    email: sinnott@matse.psu.edu
   -
-    name: Michael Ashton
-    position: CEO, being cool
-    email: michael@gmail.com
+    name: Dr. Richard G. Hennig
+    position: Professor of Materials Science, University of Florida
+    email: rhennig@mse.ufl.edu
