@@ -9,11 +9,11 @@
         </div>
         <div class="project-row">
             {% assign i = 1 %}
-            {% for post in site.posts %}
+            {% for post in site.posts reversed %}
                 <div class="project-item fade-{{ i }}">
                     {% assign i = i | plus: 1 %}
                     <a href="#projectModal-{{ post.modal-id }}" class="project-link" data-toggle="modal">
-                        <img src="{{ post.img | relative_url }}" class="img-responsive fade-{{ i }}" alt="{{ post.title }}">
+                        <img src="{{ post.image | relative_url }}" class="img-responsive fade-{{ i }}" alt="{{ post.title }}">
                     </a>
                 </div>
             {% endfor %}
@@ -37,11 +37,8 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr>
-                            <img src="{{ post.img | relative_url }}" class="img-featured img-centered" alt="{{ post.title }}">
+                            <img src="{{ post.image | relative_url }}" class="img-featured img-centered" alt="{{ post.title }}">
                             <p>{{ post.description }}</p>
-                            {% if post.action %}
-                                <p>{{ post.action }}</p>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
