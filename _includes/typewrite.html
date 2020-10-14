@@ -1,9 +1,3 @@
-<h1 class="typewrite">
-    <a id="typewrite" href="" class="typewrite">
-    <span class="wrap" id="wrap"></span>
-    </a>
-</h1>
-
 <script>
 
     function delay(ms) {
@@ -11,8 +5,9 @@
     }
 
     if (!window.matchMedia( "(hover: none)" ).matches) {
-        $(".nav-icon").on({
+        $(".typewrite-element").on({
             mouseenter: function () {
+                console.log($(this).attr("data-typewrite"));
                 new TxtType($("#typewrite"), $("#wrap").html(), $(this).attr("data-typewrite")).type();
             },
             mouseleave: function () {
@@ -24,7 +19,7 @@
             var t = 500;
             var nLoops = 0;
             while (nLoops < 5) {
-                $('.nav-icon').each(function(i, obj) {
+                $('.typewrite-element').each(function(i, obj) {
                     delay(t).then(() => $(obj).addClass("active"));
                     delay(t+500).then(() => new TxtType($("#typewrite"), "", $(obj).attr("data-typewrite")).type());
                     delay(t+2500).then(() => new TxtType($("#typewrite"), $("#wrap").html(), "").wipe());
@@ -44,6 +39,7 @@
 
     TxtType.prototype.type = function() {
         if (this.txt.length < this.endTxt.length) {
+            console.log(this.txt);
             this.txt = this.endTxt.substring(0, this.txt.length + 1);
             this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
         } else {
@@ -56,16 +52,17 @@
     };
 
     TxtType.prototype.wipe = function() {
-        if (this.txt.length) {
-            this.txt = this.txt.substring(0, this.txt.length - 1);
-            this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
-        } else {
-            this.el.html('<span class="wrap" id="wrap">'+this.txt+'</span>');
-            return;
-        };
-        var that = this;
-        setTimeout(function() {
-            that.wipe();
-        }, 20);        
+        this.el.html('<span class="wrap" id="wrap"></span>');
+        // if (this.txt.length) {
+        //     this.txt = this.txt.substring(0, this.txt.length - 1);
+        //     this.el.html('<span class="wrap blinking-cursor" id="wrap">'+this.txt+'</span>');
+        // } else {
+        //     this.el.html('<span class="wrap" id="wrap">'+this.txt+'</span>');
+        //     return;
+        // };
+        // var that = this;
+        // setTimeout(function() {
+        //     that.wipe();
+        // }, 20);        
     };
 </script>

@@ -4,13 +4,22 @@
         {% include nav.html %}
         <div class="row">
             <div class="col-lg-12 page-title fade-0">
-                <h2>Projects</h2>
+                <h2>Websites</h2>
+            </div>
+        </div>
+        <div class="row" style="height: 80px; top: -100px;">
+            <div class="col-lg-12 page-title fade-0">
+                <h4 class="typewrite" style="text-align: center; top: -100px;">
+                    <a id="typewrite" href="" class="typewrite">
+                    <span class="wrap" id="wrap"></span>
+                    </a>
+                </h4>
             </div>
         </div>
         <div class="project-row">
             {% assign i = 1 %}
-            {% for post in site.categories.projects reversed %}
-            <div class="project-item typewrite-element fade-{{ i }}"
+            {% for post in site.categories.webDesign reversed %}
+                <div class="project-item typewrite-element fade-{{ i }}"
                     data-typewrite="{{ post.title }}">
                     {% assign i = i | plus: 1 %}
                     <a href="#projectModal-{{ post.modal-id }}" class="project-link" data-toggle="modal">
@@ -19,16 +28,11 @@
                 </div>
             {% endfor %}
         </div>
-        <h1 class="typewrite" style="text-align: center; top: -40px;">
-            <a id="typewrite" href="" class="typewrite">
-            <span class="wrap" id="wrap"></span>
-            </a>
-        </h1>
     </div>
 </section>
 
  <!-- project Modals -->
- {% for post in site.categories.projects %}
+ {% for post in site.categories.webDesign %}
     <div class="project-modal modal fade-0" id="projectModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -52,5 +56,6 @@
         </div>
     </div>
 {% endfor %}
+
 
 {% include typewrite.html %}

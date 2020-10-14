@@ -1,0 +1,7 @@
+---
+title: Callysto
+layout: default
+modal-id: 6
+image: img/portfolio/callysto.png
+description: I built callysto as a Jekyll template for software/app landing pages. <a href="https://www.michael-ashton.com/callysto">Check it out</a>!
+---
