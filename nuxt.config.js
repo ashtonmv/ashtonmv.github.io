@@ -31,7 +31,7 @@ export default {
         component: resolve(__dirname, 'pages/error.vue'),
       })
     },
-    base: '/michael-ashton/',
+//    base: '/michael-ashton/',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
