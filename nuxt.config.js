@@ -73,7 +73,7 @@ export default {
     icons: {
       solid: [
         'faHome',
-        'faFeather',
+        'faGraduationCap',
         'faAddressCard',
         'faTools',
         'faFileContract',

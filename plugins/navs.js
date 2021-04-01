@@ -22,6 +22,6 @@ export default [
   {
     name: 'Google Scholar',
     link: 'https://scholar.google.com/citations?user=SgAQKZIAAAAJ&hl=en',
-    icon: 'fas fa-feather',
+    icon: 'fas fa-graduation-cap',
   },
 ]
